@@ -1,5 +1,5 @@
 import { FaLocationArrow } from "react-icons/fa";
-import { Call, Mail } from "@/icons/icons";
+import { Call, Facebook, Insta, Mail } from "@/icons/icons";
 export const StayInKarjat = [
     {
         id: 1,
@@ -50,14 +50,12 @@ export const ForEnquiries = [
 export const FollowUs = [
     {
         id: 1,
-        icon: <FaLocationArrow />,
-        text: "Terms of Use",
+        icon: <Facebook />,
         link: "#",
     },
     {
         id: 2,
-        icon: <FaLocationArrow />,
-        text: "Privacy Policy",
+        icon: <Insta />,
         link: "#",
     },
 ];

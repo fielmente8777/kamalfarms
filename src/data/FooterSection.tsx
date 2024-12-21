@@ -27,24 +27,24 @@ export const sections = [
     {
         title: "For Enquiries",
         items: ForEnquiries,
-
         renderItem: (item: any) => (
-            <Link href={item.link ? item.link : ""}
-                key={item.id}
-                className="flex items-center gap-2 text-base text-gray-300"
-            >
-                <span>{item.icon}</span>
-                <span>{item.text}</span>
-            </Link>
+            <li key={item.id}>
+                <Link href={item.link ? item.link : ""}
+                    className="flex items-center gap-2 text-base text-gray-300">
+                    <span>{item.icon}</span>
+                    <span>{item.text}</span>
+                </Link>
+            </li>
+
         ),
     },
     {
         title: "Follow Us",
         items: FollowUs,
         renderItem: (item: any) => (
-            <li key={item.id}>
-                <Link href={item.link ? item.link : ""} className="text-base text-gray-300">
-                    {item.text}
+            <li key={item.id} className="border-2 border-red-900">
+                <Link href={item.link ? item.link : ""} className="border text-base text-gray-300">
+                    {item.icon}
                 </Link>
             </li>
         ),
