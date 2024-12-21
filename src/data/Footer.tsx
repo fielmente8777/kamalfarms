@@ -1,77 +1,66 @@
-import { FaFacebookF } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { AiFillInstagram } from "react-icons/ai";
-import { IoLogoLinkedin } from "react-icons/io5";
-import { IoIosCall } from "react-icons/io";
-import { SiMinutemailer } from "react-icons/si";
 import { FaLocationArrow } from "react-icons/fa";
-export const socialMedia = [
+import { Call, Mail } from "@/icons/icons";
+export const StayInKarjat = [
     {
         id: 1,
-        icon: <FaFacebookF />,
+        text: "5 Bedroom Riverview Villa",
         link: "#",
     },
     {
         id: 2,
-        icon: <FaTwitter />,
+        text: "3 Bedroom Riverside Cottage",
         link: "#",
     },
     {
         id: 3,
-        icon: <AiFillInstagram />,
-        link: "#",
-    },
-    {
-        id: 4,
-        icon: <IoLogoLinkedin />,
+        text: "3 Bedroom Riverview Nest",
         link: "#",
     },
 ];
 
-export const getInTouch = [
+export const StayInPanchgani = [
+    {
+        id: 1,
+        text: "4.5 Bedroom Villa",
+        link: "#",
+    },
+
+];
+
+export const ForEnquiries = [
+    {
+        id: 1,
+        icon: <Call />,
+        text: "+91 9987519816",
+        link: "tel:+91 9987519816",
+    },
+    {
+        id: 2,
+        icon: <Call />,
+        text: "+91 9833167278",
+        link: "tel:+91 9833167278",
+    },
+    {
+        id: 3,
+        icon: <Mail />,
+        text: "contact@kamalfarms.com",
+        link: "mailto:contact@kamalfarms.com",
+    },
+];
+export const FollowUs = [
     {
         id: 1,
         icon: <FaLocationArrow />,
-        text: "address",
-    },
-    {
-        id: 2,
-        icon: <SiMinutemailer />,
-        text: "WmF8B@example.com",
-    },
-    {
-        id: 3,
-        icon: <IoIosCall />,
-        text: "+234 123 456 7890",
-    },
-];
-
-export const learnMore = [
-    {
-        id: 1,
-        text: "About Us",
-        link: "#",
-    },
-    {
-        id: 2,
-        text: "Our Story",
-        link: "#",
-    },
-    {
-        id: 3,
-        text: "Testimonials",
-        link: "#",
-    },
-];
-export const policy = [
-    {
-        id: 1,
         text: "Terms of Use",
         link: "#",
     },
     {
         id: 2,
+        icon: <FaLocationArrow />,
         text: "Privacy Policy",
         link: "#",
     },
 ];
+
+
+

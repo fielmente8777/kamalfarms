@@ -15,7 +15,7 @@ const Section: React.FC<SectionProps> = ({
 }) => {
   return (
     <section
-      className={`max-w-[1920px] mx-auto w-full ${lgpy ? `lg:py-${lgpy}` : "lg:py-10"} ${py ? `py-${py}` : "py-5"} ${className}`}
+      className={`max-w-[1600px] mx-auto w-full ${lgpy ? `lg:py-${lgpy}` : "lg:py-10"} ${py ? `py-${py}` : "py-5"} ${className}`}
       id={id}
     >
       {children}
