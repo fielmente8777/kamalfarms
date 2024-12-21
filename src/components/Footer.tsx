@@ -1,84 +1,10 @@
+import { getInTouch, learnMore, policy, socialMedia } from "@/data/Footer";
 import SectionWithContainer from "./SectionWithContainer";
-import { FaFacebookF } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { AiFillInstagram } from "react-icons/ai";
-import { IoLogoLinkedin } from "react-icons/io5";
 import Link from "next/link";
-import { IoIosCall } from "react-icons/io";
-import { SiMinutemailer } from "react-icons/si";
-import { FaLocationArrow } from "react-icons/fa";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const socialMedia = [
-    {
-      id: 1,
-      icon: <FaFacebookF />,
-      link: "#",
-    },
-    {
-      id: 2,
-      icon: <FaTwitter />,
-      link: "#",
-    },
-    {
-      id: 3,
-      icon: <AiFillInstagram />,
-      link: "#",
-    },
-    {
-      id: 4,
-      icon: <IoLogoLinkedin />,
-      link: "#",
-    },
-  ];
 
-  const getInTouch = [
-    {
-      id: 1,
-      icon: <FaLocationArrow />,
-      text: "address",
-    },
-    {
-      id: 2,
-      icon: <SiMinutemailer />,
-      text: "WmF8B@example.com",
-    },
-    {
-      id: 3,
-      icon: <IoIosCall />,
-      text: "+234 123 456 7890",
-    },
-  ];
-
-  const learnMore = [
-    {
-      id: 1,
-      text: "About Us",
-      link: "#",
-    },
-    {
-      id: 2,
-      text: "Our Story",
-      link: "#",
-    },
-    {
-      id: 3,
-      text: "Testimonials",
-      link: "#",
-    },
-  ];
-  const policy = [
-    {
-      id: 1,
-      text: "Terms of Use",
-      link: "#",
-    },
-    {
-      id: 2,
-      text: "Privacy Policy",
-      link: "#",
-    },
-  ];
   return (
     <footer className="bg-clr1 pb-10 max-w-[1920px] mx-auto w-full">
       <SectionWithContainer sectionClassName="bg-clr1 text-white">
