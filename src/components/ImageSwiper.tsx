@@ -17,8 +17,17 @@ import { NextButton, PrevButton } from "../icons/icons";
 import Link from "next/link";
 
 interface ImageSwiperProps {
-  images?: string[];
+  images: {
+    src: string;
+    title: string;
+    description: string;
+    link: {
+      href: string;
+      label: string;
+    };
+  }[];
   index?: number;
+
   btnName?: string;
   paginationClass?: string;
 }
@@ -34,14 +43,14 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
   const swiperButtonPrev = `.button-prev-${buttonName}`;
 
   return (
-    <div className="w-full bg-transparent slider">
+    <div className="w-full bg-transparent slider relative">
       <Swiper
         speed={1000}
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        slidesPerView={2}
+        slidesPerView={1}
         spaceBetween={10}
         modules={[Autoplay, Navigation, EffectCoverflow, Pagination]}
         navigation={{
@@ -55,7 +64,7 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
         coverflowEffect={{
           rotate: 0,
           depth: 0,
-          modifier: 3,
+          modifier: 4,
           slideShadows: false,
         }}
         breakpoints={{
@@ -65,31 +74,31 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
           },
         }}
       >
-        {images?.map((roomImage, idx) => (
-          <SwiperSlide key={idx} className="w-full h-full ">
-            <div className="w-full h-full relative">
+        {images?.map((item, idx) => (
+          <SwiperSlide key={idx} className="w-full h-full">
+            <div className="w-full h-full">
               <div className="w-full h-full relative lg:aspect-[4/2.5] aspect-[3/2.5]">
                 <Image
-                  src={roomImage}
+                  src={item.src}
                   className="h-full object-cover"
                   alt={"room"}
                   fill
                 />
               </div>
-              <div className=" p-12 z-10 w-[80%] bg-white bg-opacity-80 absolute top-1/2 -translate-y-1/2 translate-x-1/2 transform">
-                <div className="w-full h-full flex flex-col items-center justify-center gap-4">
-                  <h3 className="text-lg font-semibold text-secondary nexa">
-                    title
+              <div className=" bg-white p-7 -mt-10 w-full max-w-[44rem] flex items-center justify-center relative z-10 mx-auto">
+                <div className="w-full h-full flex flex-col items-center justify-center gap-3">
+                  <h3 className="heading4 tracking-wider font-semibold text-secondary nexa">
+                    {item.title}
                   </h3>
-                  <p className="text-textlight text-base">description</p>
-                  <Link href="#">button</Link>
+                  <p className="text-textlight text-base text-center">{item.description}</p>
+                  <Link href={item.link.href} className="text-primary font-medium border-primary/50 border-b-2">{item.link.label}</Link>
                 </div>
               </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="flex gap-2 justify-center w-fit mx-auto mt-5 items-center">
+      <div className="flex gap-2 justify-center w-fit mx-auto mt-5 items-center relative z-10">
         <button
           className={`button-prev-${buttonName} p-2 hover:scale-105 border border-transparent rounded-sm hover:shadow-xl shadow-[#f69f2b] hover:border-[#f69f2b] active:scale-95`}
         >
@@ -104,6 +113,7 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
           <NextButton />
         </button>
       </div>
+      <div className=" w-full bg-bgclr h-[35rem] absolute top-1/3 z-0"></div>
     </div>
   );
 };
