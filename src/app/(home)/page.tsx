@@ -1,9 +1,10 @@
-import { Banner } from "./components";
+// import { Banner } from "./components";
 
 export default function Home() {
   return (
     <main>
-      <Banner />
+      {/* <Banner /> */}
+      banner
     </main>
   );
 }
