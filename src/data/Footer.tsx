@@ -1,4 +1,3 @@
-import { FaLocationArrow } from "react-icons/fa";
 import { Call, Facebook, Insta, Mail } from "@/icons/icons";
 export const StayInKarjat = [
     {

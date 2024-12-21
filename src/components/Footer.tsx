@@ -1,5 +1,4 @@
 import { sections } from "@/data/FooterSection";
-import Link from "next/link";
 import SectionWithContainer from "./SectionWithContainer";
 
 const Footer = () => {

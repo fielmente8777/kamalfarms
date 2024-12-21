@@ -43,7 +43,7 @@ export const sections = [
         items: FollowUs,
         renderItem: (item: any) => (
             <li key={item.id} className="border-2 border-red-900">
-                <Link href={item.link ? item.link : ""} className="border text-base text-gray-300">
+                <Link href={item.link ? item.link : ""} className="border text-base text-gray-300 bg-red-800">
                     {item.icon}
                 </Link>
             </li>
