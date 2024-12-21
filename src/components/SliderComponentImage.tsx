@@ -36,7 +36,7 @@ const SliderComponentImage: React.FC<SliderComponentImageProps> = ({
           <Container>
             <div className="flex flex-col items-center justify-center gap-5">
               <div className="flex flex-col gap-5">
-                <h2 className="lg:text-4xl text-2xl tracking-wider nexa text-center text-[#29422C]">
+                <h2 className="lg:text-4xl text-2xl tracking-wider nexa text-center font-semibold text-secondary">
                   {title}
                 </h2>
 

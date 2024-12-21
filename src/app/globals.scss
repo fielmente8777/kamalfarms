@@ -2,15 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 @font-face {
-  font-family: "NexaScript";
-  src: url(/font/NexaScript.otf) format("opentype");
+  font-family: "NexaScript_regular";
+  src: url(/font/nexascript_regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "NexaScript_bold";
+  src: url(/font/nexascript_bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "NexaScript_light";
+  src: url(/font/nexascript_light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "NexaScript_thin";
+  src: url(/font/nexascript_thin.ttf) format("truetype");
 }
 
+.nexa_thin {
+  font-family: "NexaScript_thin", sans-serif;
+}
+.nexa_light {
+  font-family: "NexaScript_light", sans-serif;
+}
+.nexa_bold {
+  font-family: "NexaScript_bold", sans-serif;
+}
 .nexa {
-  font-family: "NexaScript", sans-serif;
+  font-family: "NexaScript_regular", sans-serif;
 }
 * {
   font-family: "Montserrat", sans-serif;
@@ -121,7 +142,6 @@
   }
 }
 
-
 .slider {
   .pagination_0,
   .pagination_1,
@@ -135,17 +155,17 @@
   .pagination_9,
   .bullets-Portfolio {
     .swiper-pagination-bullet {
-      border: 2px solid #18685C;
+      border: 2px solid #18685c;
       background-color: transparent;
-      width: .7rem;
-      height: .7rem;
+      width: 0.7rem;
+      height: 0.7rem;
       opacity: 1;
     }
 
     .swiper-pagination-bullet-active {
-      background-color: #18685C;
-      width: .7rem;
-      height: .7rem;
+      background-color: #18685c;
+      width: 0.7rem;
+      height: 0.7rem;
     }
   }
 }
