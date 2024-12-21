@@ -6,17 +6,8 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-clr1 pb-10 max-w-[1920px] mx-auto w-full">
-      <SectionWithContainer sectionClassName="bg-clr1 text-white">
-        <div className=" flex lg:items-center max-md:flex-col lg:justify-between gap-5">
-          <h2 className="heading3 tracking-wide lg:w-[60%] ">
-            Join our community by using our services and grow your business.
-          </h2>
-          <button className="bg-clr2 w-max text-white px-4 py-2 rounded-full">
-            Get Started
-          </button>
-        </div>
-        <div className="my-6 mx-1 w-full bg-white h-[1px]" />
+    <footer className="bg-Primary pb-10 max-w-[1600px] mx-auto w-full">
+      <SectionWithContainer sectionClassName="bg-primary text-white">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-16 gap-8">
           <div className="flex flex-col gap-4">
             <div>logo</div>
@@ -36,7 +27,6 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          {/* get in touch */}
           <div className="flex flex-col gap-4">
             <h3 className="text-lg font-bold">Get in touch</h3>
             <ul className="flex flex-col gap-4">
@@ -51,7 +41,6 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          {/* learn more */}
           <div className="flex flex-col gap-4">
             <h3 className="text-lg font-bold">Learn More</h3>
             <ul className="flex flex-col gap-4">
@@ -64,7 +53,6 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          {/* policy */}
           <div className="flex flex-col gap-4">
             <h3 className="text-lg font-bold">Policy</h3>
             <ul className="flex flex-col gap-4">
