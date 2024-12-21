@@ -1,4 +1,5 @@
 import { Call, Facebook, Insta, Mail } from "@/icons/icons";
+import { JSX } from "react";
 
 interface FooterProps {
     id: number;
