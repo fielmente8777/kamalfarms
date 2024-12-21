@@ -1,22 +1,24 @@
-import Link from "next/link";
 import Container from "./Container";
 import ImageSwiper from "./ImageSwiper";
 import Section from "./Section";
 
-const SliderComponentImage = ({
+interface SliderComponentImageProps {
+  title: string;
+  description: string;
+  images: string[];
+  index?: number;
+  btnName?: string;
+  paginationClass?: string;
+  descMaxWidth?: boolean;
+}
+
+const SliderComponentImage: React.FC<SliderComponentImageProps> = ({
   title,
-  title2,
   description,
-  subDescription,
-  subDescription2,
   images,
   index,
   btnName,
   paginationClass,
-  link = "#",
-  urlText = "book now",
-  border = false,
-  newTab = false,
   descMaxWidth = false,
 }) => {
   return (
@@ -25,14 +27,14 @@ const SliderComponentImage = ({
         {title && (
           <Container>
             <div className="flex flex-col items-center justify-center gap-5">
-              {border && <BorderLine />}
+              
               <div className="flex flex-col gap-5">
-                <h2 className="lg:text-4xl text-2xl tracking-wider text-center text-[#29422C]">
+                <h2 className="lg:text-4xl text-2xl tracking-wider nexa text-center text-[#29422C]">
                   {title}
                 </h2>
 
                 <p
-                  className={`text-center italic  lg:text-xl text-base text-[#29422C] ${descMaxWidth && "max-w-4xl mx-auto"} w-full`}
+                  className={`text-center  lg:text-xl text-base text-[#29422C] ${descMaxWidth && "max-w-4xl mx-auto"} w-full`}
                 >
                   {description}
                 </p>
@@ -49,7 +51,7 @@ const SliderComponentImage = ({
             paginationClass={paginationClass}
           />
         </div>
-        <Container>
+        {/* <Container>
           <div className="flex flex-col items-center justify-center gap-5 lg:mt-12 mt-4">
             {title2 && <BorderLine />}
             {title2 && (
@@ -76,7 +78,7 @@ const SliderComponentImage = ({
               </Link>
             </div>
           </div>
-        </Container>
+        </Container> */}
       </Section>
     </Section>
   );

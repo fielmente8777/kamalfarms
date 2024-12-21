@@ -14,14 +14,21 @@ import "swiper/css/pagination";
 import Image from "next/image";
 
 import { NextButton, PrevButton } from "../icons/icons";
+import Link from "next/link";
 
-const ImageSwiper = ({
-  images = [1, 2, 3, 5, 6, 7],
+interface ImageSwiperProps {
+  images?: string[];
+  index?: number;
+  btnName?: string;
+  paginationClass?: string;
+}
+const ImageSwiper: React.FC<ImageSwiperProps> = ({
+  images,
   index,
   btnName = "",
   paginationClass = "pagination_0",
 }) => {
-  let buttonName = index !== undefined ? index : btnName;
+  const buttonName = index !== undefined ? index : btnName;
 
   const swiperButtonNext = `.button-next-${buttonName}`;
   const swiperButtonPrev = `.button-prev-${buttonName}`;
@@ -59,16 +66,26 @@ const ImageSwiper = ({
         }}
       >
         {images?.map((roomImage, idx) => (
-          <SwiperSlide
-            key={idx}
-            className="w-full h-full relative lg:aspect-[4/2.5] aspect-[3/2.5]"
-          >
-            <Image
-              src={roomImage.src || roomImage }
-              className="h-full object-cover"
-              alt={"room"}
-              fill
-            />
+          <SwiperSlide key={idx} className="w-full h-full ">
+            <div className="w-full h-full relative">
+              <div className="w-full h-full relative lg:aspect-[4/2.5] aspect-[3/2.5]">
+                <Image
+                  src={roomImage}
+                  className="h-full object-cover"
+                  alt={"room"}
+                  fill
+                />
+              </div>
+              <div className=" p-12 z-10 w-[80%] bg-white bg-opacity-80 absolute top-1/2 -translate-y-1/2 translate-x-1/2 transform">
+                <div className="w-full h-full flex flex-col items-center justify-center gap-4">
+                  <h3 className="text-lg font-semibold text-secondary nexa">
+                    title
+                  </h3>
+                  <p className="text-textlight text-base">description</p>
+                  <Link href="#">button</Link>
+                </div>
+              </div>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
