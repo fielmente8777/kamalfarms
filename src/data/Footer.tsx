@@ -1,6 +1,12 @@
-import { FaLocationArrow } from "react-icons/fa";
-import { Call, Mail } from "@/icons/icons";
-export const StayInKarjat = [
+import { Call, Facebook, Insta, Mail } from "@/icons/icons";
+
+interface FooterProps {
+    id: number;
+    text?: string;
+    link?: string;
+    icon?: JSX.Element;
+}
+export const StayInKarjat: FooterProps[] = [
     {
         id: 1,
         text: "5 Bedroom Riverview Villa",
@@ -18,7 +24,7 @@ export const StayInKarjat = [
     },
 ];
 
-export const StayInPanchgani = [
+export const StayInPanchgani: FooterProps[] = [
     {
         id: 1,
         text: "4.5 Bedroom Villa",
@@ -27,7 +33,7 @@ export const StayInPanchgani = [
 
 ];
 
-export const ForEnquiries = [
+export const ForEnquiries: FooterProps[] = [
     {
         id: 1,
         icon: <Call />,
@@ -47,17 +53,15 @@ export const ForEnquiries = [
         link: "mailto:contact@kamalfarms.com",
     },
 ];
-export const FollowUs = [
+export const FollowUs: FooterProps[] = [
     {
         id: 1,
-        icon: <FaLocationArrow />,
-        text: "Terms of Use",
+        icon: <Facebook />,
         link: "#",
     },
     {
         id: 2,
-        icon: <FaLocationArrow />,
-        text: "Privacy Policy",
+        icon: <Insta />,
         link: "#",
     },
 ];

@@ -12,8 +12,8 @@ const Footer = () => {
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-16 gap-8">
           {sections.map((section, index) => (
             <div className="flex flex-col gap-4" key={index}>
-              <h3 className="text-lg font-bold">{section.title}</h3>
-              <ul className="flex flex-col gap-4">
+              <h3 className="text-lg font-semibold ">{section.title}</h3>
+              <ul className={`flex flex-col gap-4`}>
                 {section.items.map(section.renderItem)}
               </ul>
             </div>

@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "NexaScript";
+  src: url(/font/NexaScript.otf) format("opentype");
+}
+
+.nexa {
+  font-family: "NexaScript", sans-serif;
+}
 * {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -103,7 +111,7 @@
 .max-width {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 .4rem;
+  padding: 0 0.4rem;
   width: 100%;
 
   @media screen and (max-width: 640px) {
@@ -111,6 +119,31 @@
   }
 }
 
-.accordion::-webkit-details-marker {
-  display: none;
+
+.slider {
+  .pagination_0,
+  .pagination_1,
+  .pagination_2,
+  .pagination_3,
+  .pagination_4,
+  .pagination_5,
+  .pagination_6,
+  .pagination_7,
+  .pagination_8,
+  .pagination_9,
+  .bullets-Portfolio {
+    .swiper-pagination-bullet {
+      border: 2px solid #18685C;
+      background-color: transparent;
+      width: .7rem;
+      height: .7rem;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #18685C;
+      width: .7rem;
+      height: .7rem;
+    }
+  }
 }
