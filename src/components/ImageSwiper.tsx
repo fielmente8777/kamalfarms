@@ -14,9 +14,7 @@ import "swiper/css/pagination";
 import Image from "next/image";
 
 import { NextButton, PrevButton } from "../icons/icons";
-import Link from "next/link";
 import MainHeading from "./Heading/MainHeading";
-import Paragraph from "./Paragraph/Paragraph";
 import LinkComponent from "./Link/LinkComponent";
 
 interface ImageSwiperProps {

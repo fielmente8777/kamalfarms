@@ -9,7 +9,7 @@ const Map = ({
 }) => {
   return (
     <SectionWithContainer>
-      <div className="relative aspect-[4/1.35] border-2 border-[#29422C]">
+      <div className="relative aspect-square md:aspect-[4/1.35] border-2 border-[#29422C]">
         <LazyLoadedMap src={src} />
       </div>
       <div className="flex flex-col items-center justify-center mt-4">
