@@ -15,6 +15,9 @@ import Image from "next/image";
 
 import { NextButton, PrevButton } from "../icons/icons";
 import Link from "next/link";
+import MainHeading from "./Heading/MainHeading";
+import Paragraph from "./Paragraph/Paragraph";
+import LinkComponent from "./Link/LinkComponent";
 
 interface ImageSwiperProps {
   images: {
@@ -87,11 +90,15 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
               </div>
               <div className=" bg-white p-7 -mt-10 w-full max-w-[44rem] flex items-center justify-center relative z-10 mx-auto">
                 <div className="w-full h-full flex flex-col items-center justify-center gap-3">
-                  <h3 className="heading4 tracking-wider font-semibold text-secondary nexa">
+                  <MainHeading title={item.title} />
+                  {/* <Paragraph className="text-center" text={item.description} /> */}
+                  {/* <h3 className="heading4 tracking-wider font-semibold text-secondary nexa">
                     {item.title}
-                  </h3>
+                  </h3> */}
                   <p className="text-textlight text-base text-center">{item.description}</p>
-                  <Link href={item.link.href} className="text-primary font-medium border-primary/60 border-b-2">{item.link.label}</Link>
+                  {/* <Link href={item.link.href} className="text-primary font-medium border-primary/60 border-b-2">{item.link.label}</Link> */}
+                  <LinkComponent href={item.link.href} text={item.link.label} />
+
                 </div>
               </div>
             </div>

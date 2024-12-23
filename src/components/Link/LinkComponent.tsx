@@ -7,7 +7,7 @@ interface LinkProps {
 }
 const LinkComponent: React.FC<LinkProps> = ({ href, text }) => {
     return (
-        <Link href={href} className="underline capitalize text-primary">{text}</Link>
+        <Link href={href} className="text-primary font-medium border-primary/60 border-b-2 w-fit">{text}</Link>
     )
 }
 

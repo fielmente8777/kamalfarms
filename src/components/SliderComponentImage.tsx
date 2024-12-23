@@ -1,5 +1,7 @@
 import Container from "./Container";
+import MainHeading from "./Heading/MainHeading";
 import ImageSwiper from "./ImageSwiper";
+import Paragraph from "./Paragraph/Paragraph";
 import Section from "./Section";
 
 interface SliderComponentImageProps {
@@ -36,15 +38,8 @@ const SliderComponentImage: React.FC<SliderComponentImageProps> = ({
           <Container>
             <div className="flex flex-col items-center justify-center gap-5">
               <div className="flex flex-col gap-5">
-                <h2 className="lg:text-4xl text-2xl tracking-wider nexa text-center font-semibold text-secondary">
-                  {title}
-                </h2>
-
-                <p
-                  className={`text-center  lg:text-xl text-base text-[#29422C] ${descMaxWidth && "max-w-4xl mx-auto"} w-full`}
-                >
-                  {description}
-                </p>
+                <MainHeading className={"text-center "} title={title} />
+                <Paragraph className={"text-center max-w-2xl"} text={description} />
               </div>
             </div>
           </Container>
@@ -58,34 +53,6 @@ const SliderComponentImage: React.FC<SliderComponentImageProps> = ({
             paginationClass={paginationClass}
           />
         </div>
-        {/* <Container>
-          <div className="flex flex-col items-center justify-center gap-5 lg:mt-12 mt-4">
-            {title2 && <BorderLine />}
-            {title2 && (
-              <h2 className="lg:text-4xl text-2xl tracking-wider text-center text-[#29422C]">
-                {title2}
-              </h2>
-            )}
-            <p className="text-center italic font-normal lg:text-xl text-base text-[#29422C]">
-              {subDescription}
-            </p>
-            {subDescription2 && (
-              <p className="text-center italic font-normal lg:text-xl text-base text-[#29422C]">
-                {subDescription2}
-              </p>
-            )}
-            <div className="flex items-center justify-center mt-5">
-              <Link
-                href={link}
-                target={newTab ? "_blank" : "_self"}
-                rel="noopener noreferrer"
-                className="px-10 py-3 max-w-full font-medium text-base  text-white bg-[#29422C] rounded-sm border border-[#F69F2B] hover:bg-transparent  hover:text-[#29422C] duration-300 active:scale-75 hover:scale-105 "
-              >
-                {urlText}
-              </Link>
-            </div>
-          </div>
-        </Container> */}
       </Section>
     </Section>
   );

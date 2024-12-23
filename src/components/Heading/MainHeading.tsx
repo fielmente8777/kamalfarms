@@ -2,11 +2,12 @@ import React from "react";
 
 interface HeadingProps {
     title: string;
+    className?: string;
 }
 
-const MainHeading: React.FC<HeadingProps> = ({ title }) => {
+const MainHeading: React.FC<HeadingProps> = ({ title, className = "" }) => {
     return (
-        <h1 className="heading4 nexa text-secondary tracking-wider font-semibold">
+        <h1 className={` ${className} heading3 nexa text-secondary tracking-wider font-bold"`}>
             {title}
         </h1>
     );
