@@ -5,10 +5,13 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import LazyLoadedVideo from './LazyLoadedVideo';
 import SEOVideo from './SEOVideo';
-import LazyLoadedMap from './LazyLoadedMap';
 import ImageSwiper from './ImageSwiper';
 import SlideComponentImage from './SliderComponentImage';
+import Map from './Map';
+import Button from "./Button"
+import TestimonialMain from '@/components/Testimonial/TestimonialMain';
 export {
     Container, Section, SectionWithContainer, Navbar, Footer,
-    LazyLoadedVideo, SEOVideo, LazyLoadedMap, ImageSwiper, SlideComponentImage
+    LazyLoadedVideo, SEOVideo, Map, ImageSwiper, SlideComponentImage, Button,
+    TestimonialMain
 };

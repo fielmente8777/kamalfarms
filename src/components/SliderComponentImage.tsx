@@ -5,7 +5,15 @@ import Section from "./Section";
 interface SliderComponentImageProps {
   title: string;
   description: string;
-  images: string[];
+  images: {
+    src: string;
+    title: string;
+    description: string;
+    link: {
+      href: string;
+      label: string;
+    };
+  }[];
   index?: number;
   btnName?: string;
   paginationClass?: string;
@@ -27,9 +35,8 @@ const SliderComponentImage: React.FC<SliderComponentImageProps> = ({
         {title && (
           <Container>
             <div className="flex flex-col items-center justify-center gap-5">
-              
               <div className="flex flex-col gap-5">
-                <h2 className="lg:text-4xl text-2xl tracking-wider nexa text-center text-[#29422C]">
+                <h2 className="lg:text-4xl text-2xl tracking-wider nexa text-center font-semibold text-secondary">
                   {title}
                 </h2>
 
