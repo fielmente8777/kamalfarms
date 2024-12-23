@@ -3,6 +3,7 @@
 // import TestimonialMain from "@/components/Testimonial/TestimonialMain";
 
 import { SlideComponentImage } from "@/components";
+import TestimonialMain from "@/components/Testimonial/TestimonialMain";
 import { slider1 } from "@/data/homepage";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       {/* <Banner /> */}
       banner
       <SlideComponentImage {...slider1} />
+      <TestimonialMain />
     </main>
   );
 }
