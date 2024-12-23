@@ -198,3 +198,30 @@
     }
   }
 }
+
+// .banner {
+//   position: relative;
+//   .pagination {
+//     bottom: 5rem;
+//     right: 30%;
+//     position: absolute;
+//   }
+// }
+.banner-pagination {
+  bottom: 1rem;
+  left: 50%;
+  z-index: 10;
+  .swiper-pagination-bullet {
+    background-color: #c17362;
+    width: 0.8rem;
+    height: 0.8rem;
+    // opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #c17362;
+    width: 0.8rem;
+    height: 0.8rem;
+    opacity: 1;
+  }
+}

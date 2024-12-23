@@ -6,14 +6,14 @@ import {
   Map,
   SlideComponentImage,
   TestimonialMain,
-  Banner,
+  BannerWithSlider,
 } from "@/components";
 import { bannerData, slider1 } from "@/data/homepage";
 
 export default function Home() {
   return (
     <main>
-      <Banner {...bannerData} />
+      <BannerWithSlider {...bannerData} />
       <SlideComponentImage {...slider1} />
       <TestimonialMain />
       <Map

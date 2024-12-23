@@ -1,29 +1,42 @@
 export const bannerData = {
     data: [
         {
-            title: "SaffronStays",
-            description: `"Discover Our Unique Properties in Karjat and Panchgani – Your Gateway to Tranquil Retreats and Scenic Adventures."`,
+            title: "Reunite with your friends and family",
+            description: "It goes without saying that the lockdown made us miss our loved ones. It's time to spend some moments of fun, love and laughter with your extended family and friends. Be it a get together or a grand celebration, reconnect with your loved ones at Kamal farms.",
             image: "/outside.jpeg",
             pageLink: {
                 href: "/",
-                label: "Home"
+                label: "View 5 Bhk Luxury Villa"
             },
             btnLink: {
                 href: "/properties",
-                label: "Explore"
+                label: "Book Now"
             }
         },
         {
-            title: "SaffronStays",
-            description: `"Discover Our Unique Properties in Karjat and Panchgani – Your Gateway to Tranquil Retreats and Scenic Adventures."`,
+            title: "Self Drive Getaway to Nature's Abode",
+            description: "We understand that the global pandemic has confined us to our homes. But a short trip to Karjat in the safety and comfort of your own vehicle sounds ideal. Kamal farms offer their homestead to individuals and families looking for a perfect self- drive getaway.",
             image: "/outside.jpeg",
             pageLink: {
                 href: "/",
-                label: "Home"
+                label: "View Location"
             },
             btnLink: {
                 href: "/properties",
-                label: "Explore"
+                label: "Book Now"
+            }
+        },
+        {
+            title: "Wedding in the New Normal",
+            description: "Having an extravagant wedding is nearly impossible in the COVID-19 era. With accommodation for upto 50 guests, have your destination wedding at Kamal Farms. Celebrate the best day of your life under the canopy of trees and the melody of Pej river.",
+            image: "/outside.jpeg",
+            pageLink: {
+                href: "/",
+                label: "Know More"
+            },
+            btnLink: {
+                href: "/properties",
+                label: "Book Now"
             }
         },
     ]

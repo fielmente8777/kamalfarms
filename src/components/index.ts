@@ -10,9 +10,10 @@ import SlideComponentImage from './SliderComponentImage';
 import Map from './Map';
 import Button from "./Button"
 import TestimonialMain from '@/components/Testimonial/TestimonialMain';
+import BannerWithSlider from './Banner/BannerWithSlider';
 import Banner from './Banner/Banner';
 export {
     Container, Section, SectionWithContainer, Navbar, Footer,
     LazyLoadedVideo, SEOVideo, Map, ImageSwiper, SlideComponentImage, Button,
-    TestimonialMain, Banner
+    TestimonialMain, BannerWithSlider, Banner
 };
