@@ -1,3 +1,36 @@
+export const bannerData = {
+    data: [
+        {
+            title: "SaffronStays",
+            description: `"Discover Our Unique Properties in Karjat and Panchgani – Your Gateway to Tranquil Retreats and Scenic Adventures."`,
+            image: "/outside.jpeg",
+            pageLink: {
+                href: "/",
+                label: "Home"
+            },
+            btnLink: {
+                href: "/properties",
+                label: "Explore"
+            }
+        },
+        {
+            title: "SaffronStays",
+            description: `"Discover Our Unique Properties in Karjat and Panchgani – Your Gateway to Tranquil Retreats and Scenic Adventures."`,
+            image: "/outside.jpeg",
+            pageLink: {
+                href: "/",
+                label: "Home"
+            },
+            btnLink: {
+                href: "/properties",
+                label: "Explore"
+            }
+        },
+    ]
+}
+
+
+
 export const slider1 = {
     title: "Our Properties",
     description: `"Discover Our Unique Properties in Karjat and Panchgani – Your Gateway to Tranquil Retreats and Scenic Adventures."`,

@@ -64,7 +64,7 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
         coverflowEffect={{
           rotate: 0,
           depth: 0,
-          modifier: 4,
+          modifier: 10,
           slideShadows: false,
         }}
         breakpoints={{
@@ -91,7 +91,7 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
                     {item.title}
                   </h3>
                   <p className="text-textlight text-base text-center">{item.description}</p>
-                  <Link href={item.link.href} className="text-primary font-medium border-primary/50 border-b-2">{item.link.label}</Link>
+                  <Link href={item.link.href} className="text-primary font-medium border-primary/60 border-b-2">{item.link.label}</Link>
                 </div>
               </div>
             </div>
@@ -100,7 +100,7 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
       </Swiper>
       <div className="flex gap-2 justify-center w-fit mx-auto mt-5 items-center relative z-10">
         <button
-          className={`button-prev-${buttonName} p-2 hover:scale-105 border border-transparent rounded-sm hover:shadow-xl shadow-[#f69f2b] hover:border-[#f69f2b] active:scale-95`}
+          className={`button-prev-${buttonName} p-2 hover:scale-105 border border-transparent rounded-sm hover:shadow-xl shadow-secondary hover:border-secondary active:scale-95`}
         >
           <PrevButton />
         </button>
@@ -108,7 +108,7 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
           className={`flex items-center justify-center gap-1 ${paginationClass}`}
         />
         <button
-          className={`button-next-${buttonName} p-2 hover:scale-105 border border-transparent rounded-sm hover:shadow-xl shadow-[#f69f2b] hover:border-[#f69f2b] active:scale-95`}
+          className={`button-next-${buttonName} p-2 hover:scale-105 border border-transparent rounded-sm hover:shadow-xl shadow-secondary hover:border-secondary active:scale-95`}
         >
           <NextButton />
         </button>
