@@ -1,5 +1,5 @@
 import { sections } from "@/data/FooterSection";
-import SectionWithContainer from "./SectionWithContainer";
+import SectionWithContainer from "./SectionComponents/SectionWithContainer";
 import { CopyRight, Facebook, Insta } from "@/icons/icons";
 
 const Footer = () => {

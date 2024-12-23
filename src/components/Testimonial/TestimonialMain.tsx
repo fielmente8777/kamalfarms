@@ -1,4 +1,4 @@
-import SectionWithContainer from "../SectionWithContainer";
+import SectionWithContainer from "../SectionComponents/SectionWithContainer";
 import TestimonialSwiper from "./TestimonialSwiper";
 import MainHeading from "../Heading/MainHeading";
 import Paragraph from "../Paragraph/Paragraph";

@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import Container from "./Container";
+import Container from "../SectionComponents/Container";
 import { NavLink } from "@/data/navbar";
 import { DropDown, LogoName } from "@/icons/icons";
 import Image from "next/image";
@@ -45,21 +45,38 @@ const Navbar: React.FC = () => {
             <div className="flex items-center gap-4 text-base relative">
               {NavLink.slice(1, NavLink.length - 1).map((link) => (
                 <span key={link.id} className="group relative text-primary">
-                  <Link
-                    href={link.link}
-                    className={`flex items-center justify-center gap-2 px-4 py-2 duration-700 transition ease-linear hover:border-primary border-b-2 border-transparent ${
-                      pathname === link.link
-                        ? "border-primary border-b-2 font-medium text-white"
-                        : ""
-                    }`}
-                  >
-                    {link.name}{" "}
-                    {link.subLinks && (
-                      <span className="ml-2 group-hover:rotate-180 duration-500 transition ease-in-out">
-                        <DropDown />
-                      </span>
-                    )}
-                  </Link>
+                  {link.id === 2 || link.id === 3 ? (
+                    <span
+                      className={`flex items-center justify-center gap-2 px-4 cursor-pointer py-2 duration-700 transition ease-linear hover:border-primary border-b-2 border-transparent ${
+                        pathname === link.link
+                          ? "border-primary border-b-2 font-medium text-white"
+                          : ""
+                      }`}
+                    >
+                      {link.name}{" "}
+                      {link.subLinks && (
+                        <span className="ml-2 group-hover:rotate-180 duration-500 transition ease-in-out">
+                          <DropDown />
+                        </span>
+                      )}
+                    </span>
+                  ) : (
+                    <Link
+                      href={link.link}
+                      className={`flex items-center justify-center gap-2 px-4 py-2 duration-700 transition ease-linear hover:border-primary border-b-2 border-transparent ${
+                        pathname === link.link
+                          ? "border-primary border-b-2 font-medium text-white"
+                          : ""
+                      }`}
+                    >
+                      {link.name}{" "}
+                      {link.subLinks && (
+                        <span className="ml-2 group-hover:rotate-180 duration-500 transition ease-in-out">
+                          <DropDown />
+                        </span>
+                      )}
+                    </Link>
+                  )}
                   {link.subLinks && (
                     <ul className="absolute left-0 w-max max-w-[300px] hidden group-hover:block bg-white shadow-lg p-1">
                       {link.subLinks.map((subLink) => (
@@ -94,9 +111,9 @@ const Navbar: React.FC = () => {
             </button>
 
             <div
-              className={`fixed top-20 left-0 w-full h-full bg-white z-50 transform transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+              className={`fixed top-24 left-0 w-full h-full bg-white z-50 transform transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"}`}
             >
-              <MobileNavbar />
+              <MobileNavbar setIsOpen={setIsOpen} />
             </div>
           </div>
         </nav>

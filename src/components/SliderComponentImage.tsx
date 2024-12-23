@@ -1,8 +1,8 @@
-import Container from "./Container";
+import Container from "./SectionComponents/Container";
 import MainHeading from "./Heading/MainHeading";
 import ImageSwiper from "./ImageSwiper";
 import Paragraph from "./Paragraph/Paragraph";
-import Section from "./Section";
+import Section from "./SectionComponents/Section";
 
 interface SliderComponentImageProps {
   title: string;
@@ -29,7 +29,6 @@ const SliderComponentImage: React.FC<SliderComponentImageProps> = ({
   index,
   btnName,
   paginationClass,
-  descMaxWidth = false,
 }) => {
   return (
     <Section className="bg-[#ffffff]">
