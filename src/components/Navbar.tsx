@@ -19,10 +19,13 @@ const Navbar: React.FC = () => {
     } else {
       document.body.style.overflow = "auto";
     }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [isOpen]);
 
   return (
-    <header>
+    <header className="bg-transparent relative top-0 left-0 w-full z-50 pb-2">
       <Container>
         <nav className="flex justify-between items-center">
           <div className="flex flex-col items-center ">
@@ -39,20 +42,20 @@ const Navbar: React.FC = () => {
             </span>
           </div>
           <div className="lg:flex hidden items-center gap-4 text-base">
-            <ul className="flex items-center gap-4 text-base relative">
+            <div className="flex items-center gap-4 text-base relative">
               {NavLink.slice(1, NavLink.length - 1).map((link) => (
-                <li key={link.id} className="group relative text-primary">
+                <span key={link.id} className="group relative text-primary">
                   <Link
                     href={link.link}
-                    className={`flex items-center justify-center gap-2 px-4 py-2 duration-300 transition ease-in-out hover:border-primary border-b-2 border-transparent ${
+                    className={`flex items-center justify-center gap-2 px-4 py-2 duration-700 transition ease-linear hover:border-primary border-b-2 border-transparent ${
                       pathname === link.link
-                        ? "border-primary border-b-2 text-white"
+                        ? "border-primary border-b-2 font-medium text-white"
                         : ""
                     }`}
                   >
                     {link.name}{" "}
                     {link.subLinks && (
-                      <span className="ml-2">
+                      <span className="ml-2 group-hover:rotate-180 duration-500 transition ease-in-out">
                         <DropDown />
                       </span>
                     )}
@@ -65,7 +68,7 @@ const Navbar: React.FC = () => {
                             href={subLink.link}
                             className={`block px-4 py-2 duration-300 transition ease-in-out hover:border-primary border-b-2 border-transparent  ${
                               pathname === link.link
-                                ? "border-primary border-b-2 text-white"
+                                ? "border-primary border-b-2 font-medium text-white"
                                 : ""
                             }`}
                           >
@@ -75,9 +78,9 @@ const Navbar: React.FC = () => {
                       ))}
                     </ul>
                   )}
-                </li>
+                </span>
               ))}
-            </ul>
+            </div>
             <button className="bg-primary text-white px-6 py-5">
               Contact Us
             </button>
