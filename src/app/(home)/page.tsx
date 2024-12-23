@@ -1,13 +1,10 @@
-// import { Banner } from "./components";
-
-// import TestimonialMain from "@/components/Testimonial/TestimonialMain";
-
 import {
   Map,
   SlideComponentImage,
   TestimonialMain,
   Banner,
 } from "@/components";
+import About from "@/components/About/About";
 import { bannerData, slider1 } from "@/data/homepage";
 
 export default function Home() {
@@ -15,6 +12,7 @@ export default function Home() {
     <main>
       <Banner {...bannerData} />
       <SlideComponentImage {...slider1} />
+      <About />
       <TestimonialMain />
       <Map
         src={

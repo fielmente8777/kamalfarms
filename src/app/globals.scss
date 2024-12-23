@@ -8,14 +8,17 @@
   font-family: "NexaScript_regular";
   src: url(/font/nexascript_regular.ttf) format("truetype");
 }
+
 @font-face {
   font-family: "NexaScript_bold";
   src: url(/font/nexascript_bold.ttf) format("truetype");
 }
+
 @font-face {
   font-family: "NexaScript_light";
   src: url(/font/nexascript_light.ttf) format("truetype");
 }
+
 @font-face {
   font-family: "NexaScript_thin";
   src: url(/font/nexascript_thin.ttf) format("truetype");
@@ -24,15 +27,19 @@
 .nexa_thin {
   font-family: "NexaScript_thin", sans-serif;
 }
+
 .nexa_light {
   font-family: "NexaScript_light", sans-serif;
 }
+
 .nexa_bold {
   font-family: "NexaScript_bold", sans-serif;
 }
+
 .nexa {
   font-family: "NexaScript_regular", sans-serif;
 }
+
 * {
   font-family: "Montserrat", sans-serif;
   margin: 0;
@@ -130,6 +137,7 @@
     line-height: 1.2;
   }
 }
+
 .description1 {
   font-size: 0.875rem;
   line-height: 1.2;
@@ -172,6 +180,7 @@
 }
 
 .slider {
+
   .pagination_0,
   .pagination_1,
   .pagination_2,

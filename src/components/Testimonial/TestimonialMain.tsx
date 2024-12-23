@@ -1,24 +1,21 @@
-import { Testimonial } from "@/data/Testimonial";
-import TestimonialCard from "./TestimonialCard";
 import SectionWithContainer from "../SectionWithContainer";
 import TestimonialSwiper from "./TestimonialSwiper";
+import MainHeading from "../Heading/MainHeading";
+import Paragraph from "../Paragraph/Paragraph";
 
 const TestimonialMain = () => {
   return (
     <SectionWithContainer>
       <div className="flex flex-col items-center justify-center gap-5">
-        <h2 className="text-3xl font-semibold text-secondary nexa text-center">Testimonials</h2>
-        <p className="text-center text-textdark max-w-2xl">
-          Our guests’ experiences are at the core of what we do. See what they
-          have to say about their time with us and why they keep coming back.
-        </p>
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {Testimonial.map((testimonial, index) => (
-            <TestimonialCard key={index} testimonial={testimonial} />
-          ))}
-        </div> */}
+        <MainHeading title={"Testimonials"} />
+        <span className="max-w-2xl">
+          <Paragraph className="text-center" text={"Our guests’ experiences are at the core of what we do. See what they have to say about their time with us and why they keep coming back."} />
+        </span>
       </div>
-      <TestimonialSwiper />
+      <div className="mt-5 md:mt-10">
+        <TestimonialSwiper />
+      </div>
+
     </SectionWithContainer>
   );
 };
