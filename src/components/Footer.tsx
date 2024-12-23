@@ -1,6 +1,7 @@
 import { sections } from "@/data/FooterSection";
-import SectionWithContainer from "./SectionWithContainer";
+import SectionWithContainer from "./SectionComponents/SectionWithContainer";
 import { CopyRight, Facebook, Insta } from "@/icons/icons";
+import Link from "next/link";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -34,8 +35,8 @@ const Footer = () => {
           </div>
         </div>
         <hr className="flex w-full mt-5" />
-        <div className="flex justify-center text-base  pt-5">
-          Design and developed by Eazotel
+        <div className="flex justify-center text-base gap-1 pt-5">
+          Design and developed by{" "}<Link href="https://eazotel.com/" target="_blank" >{" Eazotel"}</Link>
         </div>
       </SectionWithContainer>
     </footer>

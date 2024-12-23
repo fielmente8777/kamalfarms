@@ -1,17 +1,18 @@
-import Container from "./Container";
+import Container from "./SectionComponents/Container";
 import MainHeading from "./Heading/MainHeading";
 import ImageSwiper from "./ImageSwiper";
 import Paragraph from "./Paragraph/Paragraph";
-import Section from "./Section";
+import Section from "./SectionComponents/Section";
 
 interface SliderComponentImageProps {
   title: string;
-  description: string;
+  description?: string;
   images: {
     src: string;
-    title: string;
-    description: string;
-    link: {
+    title?: string;
+    alt?: string;
+    description?: string;
+    link?: {
       href: string;
       label: string;
     };
@@ -20,6 +21,7 @@ interface SliderComponentImageProps {
   btnName?: string;
   paginationClass?: string;
   descMaxWidth?: boolean;
+  details?: boolean;
 }
 
 const SliderComponentImage: React.FC<SliderComponentImageProps> = ({
@@ -28,8 +30,8 @@ const SliderComponentImage: React.FC<SliderComponentImageProps> = ({
   images,
   index,
   btnName,
+  details,
   paginationClass,
-  descMaxWidth = false,
 }) => {
   return (
     <Section className="bg-[#ffffff]">
@@ -51,6 +53,7 @@ const SliderComponentImage: React.FC<SliderComponentImageProps> = ({
             index={index}
             btnName={btnName}
             paginationClass={paginationClass}
+            details={details}
           />
         </div>
       </Section>

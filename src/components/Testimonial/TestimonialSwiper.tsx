@@ -11,36 +11,26 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import TestimonialCard from "./TestimonialCard";
-import { Testimonial } from "@/data/Testimonial";
 
-const TestimonialSwiper = () => {
+interface TestimonialCard {
+    data: {
+        icon: string;
+        name: string;
+        text: string;
+    }
+
+}
+const TestimonialSwiper: React.FC<TestimonialCard> = ({ data }) => {
 
     return (
         <div>
             <Swiper
                 speed={1000}
-                // effect={"coverflow"}
-                // grabCursor={true}
-                // centeredSlides={true}
                 autoplay={true}
                 loop={true}
                 slidesPerView={1}
                 spaceBetween={10}
                 modules={[Autoplay, Navigation, EffectCoverflow, Pagination]}
-                // navigation={{
-                //     nextEl: swiperButtonNext,
-                //     prevEl: swiperButtonPrev,
-                // }}
-                // pagination={{
-                //     el: "." + paginationClass,
-                //     clickable: true,
-                // }}
-                // coverflowEffect={{
-                //     rotate: 0,
-                //     depth: 0,
-                //     modifier: 3,
-                //     slideShadows: false,
-                // }}
                 breakpoints={{
                     768: {
                         slidesPerView: 3,
@@ -57,7 +47,7 @@ const TestimonialSwiper = () => {
 
                 }}
             >
-                {Testimonial?.map((testimonial, index) => (
+                {data?.map((testimonial, index) => (
                     <SwiperSlide key={index} className="w-full h-full ">
                         <TestimonialCard key={index} testimonial={testimonial} />
                     </SwiperSlide>

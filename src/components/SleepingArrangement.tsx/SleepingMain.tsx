@@ -1,48 +1,26 @@
-import Container from "../Container"
 import MainHeading from "../Heading/MainHeading"
+import Container from "../SectionComponents/Container"
 import SleepingCard from "./SleepingCard"
 
-const SleepingMain = () => {
 
-    const sleepingData = [
-        {
-            name: "Bedroom 1",
-            type1: "1 King Bedroom",
-            type2: "1 Queen Bedroom",
-        },
-        {
-            name: "Bedroom 2",
-            type1: "1 King Bedroom",
-            type2: "1 Queen Bedroom",
-        },
-        {
-            name: "Bedroom 3",
-            type1: "1 King Bedroom",
-            type2: "1 Queen Bedroom",
-        },
-        {
-            name: "Bedroom 4",
-            type1: "1 King Bedroom",
-            type2: "1 Queen Bedroom",
-        },
-        {
-            name: "Bedroom 5",
-            type1: "1 King Bedroom",
-            type2: "1 Queen Bedroom",
-        },
-        {
-            name: "Loft",
-            type1: "10 Floor",
-            type2: "Mattresses",
-        },
-    ]
+
+interface SleepingArrangement {
+    title: string;
+    data?: {
+        name: string;
+        type1: string;
+        type2: string;
+
+    }[]
+}
+const SleepingMain: React.FC<SleepingArrangement> = ({ title, data }) => {
     return (
         <div>
             <Container>
-                <MainHeading title="Sleeping Arrangement" />
+                <MainHeading title={title} />
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 gap-4 mt-5">
-                    {sleepingData.map((data, index) => (
-                        <SleepingCard key={index} data={data} />
+                    {data?.map((item, index) => (
+                        <SleepingCard key={index} item={item} />
                     ))}
                 </div>
             </Container>

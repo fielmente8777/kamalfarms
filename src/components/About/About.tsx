@@ -3,7 +3,7 @@ import MainHeading from "../Heading/MainHeading"
 import AboutImage from "../../../public/outside.jpeg"
 import Paragraph from "../Paragraph/Paragraph"
 import LinkComponent from "../Link/LinkComponent"
-import SectionWithContainer from "../SectionWithContainer"
+import SectionWithContainer from "../SectionComponents/SectionWithContainer"
 
 const About = () => {
     return (
