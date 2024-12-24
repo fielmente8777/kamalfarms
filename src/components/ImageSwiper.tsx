@@ -23,7 +23,7 @@ interface ImageSwiperProps {
     title?: string;
     description?: string;
     alt?: string;
-    link: {
+    link?: {
       href: string;
       label: string;
     };
@@ -39,7 +39,7 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
   index,
   btnName = "",
   paginationClass = "pagination_0",
-  details = false
+  details = false,
 }) => {
   const buttonName = index !== undefined ? index : btnName;
 
@@ -89,19 +89,25 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
                   fill
                 />
               </div>
-              {details && <div className=" bg-white p-7 -mt-10 w-full max-w-[44rem] flex items-center justify-center relative z-10 mx-auto">
-                <div className="w-full h-full flex flex-col items-center justify-center gap-3">
-                  <MainHeading title={item.title} />
-                  {/* <Paragraph className="text-center" text={item.description} /> */}
-                  {/* <h3 className="heading4 tracking-wider font-semibold text-secondary nexa">
-                    {item.title}
-                  </h3> */}
-                  <p className="text-textlight text-base text-center">{item.description}</p>
-                  {/* <Link href={item.link.href} className="text-primary font-medium border-primary/60 border-b-2">{item.link.label}</Link> */}
-                  <LinkComponent href={item.link.href} text={item.link.label} />
-
+              {details && (
+                <div className=" bg-white p-7 -mt-10 w-full max-w-[44rem] flex items-center justify-center relative z-10 mx-auto">
+                  <div className="w-full h-full flex flex-col items-center justify-center gap-3">
+                    {item.title && <MainHeading title={item.title} />}
+                    {item.description && (
+                      <p className="text-textlight text-base text-center">
+                        {item.description}
+                      </p>
+                    )}
+                    {/* <Link href={item.link.href} className="text-primary font-medium border-primary/60 border-b-2">{item.link.label}</Link> */}
+                    {item.link && (
+                      <LinkComponent
+                        href={item.link.href}
+                        text={item.link.label}
+                      />
+                    )}
+                  </div>
                 </div>
-              </div>}
+              )}
             </div>
           </SwiperSlide>
         ))}
@@ -121,7 +127,9 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
           <NextButton />
         </button>
       </div>
-      {details && <div className=" w-full bg-bgclr h-[35rem] absolute top-1/3 z-0"></div>}
+      {details && (
+        <div className=" w-full bg-bgclr h-[35rem] absolute top-1/3 z-0"></div>
+      )}
     </div>
   );
 };

@@ -51,7 +51,7 @@ const TwoColGridCard: React.FC<TwoColGridCardProps> = ({
           )}
           {arrImages && (
             <div
-              className={`grid grid-cols-6 auto-rows-[17rem] gap-1 w-full h-full rounded-sm ${index % 2 === 0 ? "order-1" : "order-2"}`}
+              className={`grid grid-cols-6 lg:auto-rows-[17rem] auto-rows-[8rem] gap-1 w-full h-full rounded-sm ${index % 2 === 0 ? "order-1" : "order-2"}`}
             >
               {arrImages.map((image, index) => (
                 <div
@@ -75,15 +75,15 @@ const TwoColGridCard: React.FC<TwoColGridCardProps> = ({
           {subTitle && <MainHeading title={subTitle} />}
           {description && <Paragraph text={description} />}
           {list && (
-            <ul className="text-gray-600 list-disc pl-4">
+            <ul className="text-gray-600 list-disc pl-4 flex flex-col gap-1">
               {list.map((item, index) => (
-                <li key={index} className="text-base">
+                <li key={index} className="description1">
                   {item}
                 </li>
               ))}
             </ul>
           )}
-          <Button href="/contact" label="Contact Us" className="mt-4 w-fit" />
+          <Button href="/contact-us" label="Contact Us" className="mt-4 w-fit" />
         </div>
       </div>
     </SectionWithContainer>

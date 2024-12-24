@@ -41,7 +41,12 @@ const SliderComponentImage: React.FC<SliderComponentImageProps> = ({
             <div className="flex flex-col items-center justify-center gap-5">
               <div className="flex flex-col gap-5">
                 <MainHeading className={"text-center "} title={title} />
-                <Paragraph className={"text-center max-w-2xl"} text={description} />
+                {description && (
+                  <Paragraph
+                    className={"text-center max-w-2xl"}
+                    text={description}
+                  />
+                )}
               </div>
             </div>
           </Container>

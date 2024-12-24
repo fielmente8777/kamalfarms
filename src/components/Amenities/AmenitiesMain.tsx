@@ -1,13 +1,12 @@
 import React from 'react'
 import AmenitesCard from './AmenitesCard'
-import { Call } from '@/icons/icons'
 import MainHeading from '../Heading/MainHeading'
 import Container from '../SectionComponents/Container'
 
 interface Amenities {
     title: string;
     list?: {
-        icon: any;
+        icon: unknown;
         name: string;
     }[]
 }

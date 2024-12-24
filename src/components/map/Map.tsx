@@ -13,7 +13,12 @@ const Map = ({
         <LazyLoadedMap src={src} />
       </div>
       <div className="flex flex-col items-center justify-center mt-4">
-        <Button label="Get Directions" href="" className="w-fit" />
+        <Button
+          label="Get Directions"
+          href="https://maps.app.goo.gl/3JkEJeHHYXydK9Nq8"
+          newTabe
+          className="w-fit"
+        />
       </div>
     </SectionWithContainer>
   );

@@ -28,29 +28,30 @@ const Navbar: React.FC = () => {
     <header className="bg-transparent relative top-0 left-0 w-full z-50 pb-2">
       <Container>
         <nav className="flex justify-between items-center">
-          <div className="flex flex-col items-center ">
-            <Link href="/" className="relative h-20 aspect-[4/2]">
+          <Link href="/" className="flex flex-col items-center ">
+            <span className="relative h-20 aspect-[4/2]">
               <Image
                 src="/Logo.svg"
                 alt="Kamalfarms"
                 fill
                 className="object-contain"
               />
-            </Link>
+            </span>
             <span className="text-2xl capitalize tracking-wider font-bold text-primary nexa -mt-2">
               <LogoName />
             </span>
-          </div>
+          </Link>
           <div className="lg:flex hidden items-center gap-4 text-base">
             <div className="flex items-center gap-4 text-base relative">
               {NavLink.slice(1, NavLink.length - 1).map((link) => (
                 <span key={link.id} className="group relative text-primary">
                   {link.id === 2 || link.id === 3 ? (
                     <span
-                      className={`flex items-center justify-center gap-2 px-4 cursor-pointer py-2 duration-700 transition ease-linear hover:border-primary border-b-2 border-transparent ${pathname === link.link
-                        ? "border-primary border-b-2 font-medium text-white"
-                        : ""
-                        }`}
+                      className={`flex items-center justify-center gap-2 px-4 cursor-pointer py-2 duration-700 transition ease-linear hover:border-primary border-b-2 border-transparent ${
+                        pathname === link.link
+                          ? "border-primary border-b-2 font-medium text-white"
+                          : ""
+                      }`}
                     >
                       {link.name}{" "}
                       {link.subLinks && (
@@ -62,10 +63,11 @@ const Navbar: React.FC = () => {
                   ) : (
                     <Link
                       href={link.link}
-                      className={`flex items-center justify-center gap-2 px-4 py-2 duration-700 transition ease-linear hover:border-primary border-b-2 border-transparent ${pathname === link.link
-                        ? "border-primary border-b-2 font-medium"
-                        : ""
-                        }`}
+                      className={`flex items-center justify-center gap-2 px-4 py-2 duration-700 transition ease-linear hover:border-primary border-b-2 border-transparent ${
+                        pathname === link.link
+                          ? "border-primary border-b-2 font-medium"
+                          : ""
+                      }`}
                     >
                       {link.name}{" "}
                       {link.subLinks && (
@@ -81,10 +83,11 @@ const Navbar: React.FC = () => {
                         <li key={subLink.id}>
                           <Link
                             href={subLink.link}
-                            className={`block px-4 py-2 duration-300 transition ease-in-out hover:border-primary border-b-2 border-transparent  ${pathname === link.link
-                              ? "border-primary border-b-2 font-medium text-white"
-                              : ""
-                              }`}
+                            className={`block px-4 py-2 duration-300 transition ease-in-out hover:border-primary border-b-2 border-transparent  ${
+                              pathname === link.link
+                                ? "border-primary border-b-2 font-medium text-white"
+                                : ""
+                            }`}
                           >
                             {subLink.name}
                           </Link>
@@ -95,9 +98,12 @@ const Navbar: React.FC = () => {
                 </span>
               ))}
             </div>
-            <button className="bg-primary text-white px-6 py-5">
+            <Link
+              href="/contact-us"
+              className="bg-primary text-white px-6 py-5"
+            >
               Contact Us
-            </button>
+            </Link>
           </div>
           <div className="lg:hidden block">
             <button

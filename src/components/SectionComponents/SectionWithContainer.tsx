@@ -7,6 +7,7 @@ interface SectionWithContainerProps {
   sectionClassName?: string;
   containerClassName?: string;
   children: React.ReactNode;
+  containerStyle?: React.CSSProperties;
 }
 
 const SectionWithContainer: React.FC<SectionWithContainerProps> = ({
@@ -14,11 +15,12 @@ const SectionWithContainer: React.FC<SectionWithContainerProps> = ({
   containerId = "",
   sectionClassName = "",
   containerClassName = "",
+  containerStyle={},
   children,
 }) => {
   return (
     <Section id={sectionId} className={sectionClassName}>
-      <Container id={containerId} className={containerClassName}>
+      <Container id={containerId} className={containerClassName} style={containerStyle}>
         {children}
       </Container>
     </Section>

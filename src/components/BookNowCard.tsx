@@ -6,17 +6,17 @@ import Section from "./SectionComponents/Section";
 
 interface BookNowDataProps {
   title: string;
-  subtitle: string;
+  subTitle: string;
 }
-const BookNowCard: React.FC<BookNowDataProps> = ({ title, subtitle }) => {
+const BookNowCard: React.FC<BookNowDataProps> = ({ title, subTitle }) => {
   return (
     <Section>
-      <div className="max-width mx-auto bg-secondary max-md:!px-3">
-        <div className="grid lg:grid-cols-3 grid-cols-1 items-center justify-center gap-4 py-4">
+      <div className="max-width mx-auto bg-secondary ">
+        <div className="grid lg:grid-cols-3 grid-cols-1 items-center justify-center gap-4 py-6 lg:px-8">
           <div className="col-span-2">
             <div className="flex flex-col gap-4">
               <Paragraph
-                text={subtitle}
+                text={subTitle}
                 className="text-white"
               />
               <MainHeading

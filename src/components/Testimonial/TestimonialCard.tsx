@@ -3,18 +3,20 @@
 import Paragraph from "../Paragraph/Paragraph";
 
 interface TestimonialCardProps {
-  testimonial: {
-    icon: React.ReactNode;
-    text: string;
-    name: string;
-  };
+  icon: React.ReactNode;
+  text: string;
+  name: string;
 }
-const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
+const TestimonialCard: React.FC<TestimonialCardProps> = ({
+  text,
+  name,
+  icon,
+}) => {
   return (
     <div className=" flex flex-col gap-5 justify-center items-center py-5 px-4 bg-bgclr">
-      <span>{testimonial.icon}</span>
-      <Paragraph className={"text-center"} text={testimonial.text} />
-      <span className="text-base font-semibold">{testimonial.name}</span>
+      <span>{icon}</span>
+      <Paragraph className={"text-center"} text={text} />
+      <span className="text-base font-semibold">{name}</span>
     </div>
   );
 };

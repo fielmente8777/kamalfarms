@@ -1,7 +1,59 @@
 import { Call } from "@/icons/icons";
-import { Testimonial } from "./Testimonial";
+import { Testimonial, testimonialData } from "./Testimonial";
 
-export const SlugData = [
+
+interface slugDataProps {
+    id: string;
+    slug: string;
+    bannerData: {
+        images: string[];
+        title: string;
+        desc: string[];
+    };
+    experience: {
+        title: string;
+        arrImages: string[];
+        list: string[];
+    };
+    sleepingArrangement: {
+        title: string;
+        data: {
+            name: string;
+            type1: string;
+            type2: string;
+        }[];
+    };
+    amenities: {
+        title: string;
+        list: {
+            icon: unknown;
+            name: string;
+        }[];
+    };
+    gallery: {
+        title: string;
+        images: {
+            src: string;
+            title?: string;
+            alt?: string;
+            link?: {
+                href: string;
+                label: string;
+            };
+        }[];
+    };
+    testimonial: {
+        title: string;
+        data: testimonialData[];
+    };
+    bookNow: {
+        title: string;
+        subTitle: string;
+    };
+}
+
+
+export const SlugData: slugDataProps[] = [
     {
         id: "1",
         slug: "5-bedroom-riverview-villa",
@@ -133,7 +185,7 @@ export const SlugData = [
         },
         bookNow: {
             title: "Your Dream 5-Bedroom Villa for an Unforgettable Getaway!",
-            subtitle: "Discover Luxery Living",
+            subTitle: "Discover Luxery Living",
         }
 
     },
@@ -253,7 +305,7 @@ export const SlugData = [
         },
         bookNow: {
             title: "Your Dream 5-Bedroom Villa for an Unforgettable Getaway!",
-            subtitle: "Discover Luxery Living",
+            subTitle: "Discover Luxery Living",
         }
 
     },
@@ -388,7 +440,7 @@ export const SlugData = [
         },
         bookNow: {
             title: "Your Dream 5-Bedroom Villa for an Unforgettable Getaway!",
-            subtitle: "Discover Luxery Living",
+            subTitle: "Discover Luxery Living",
         }
 
     },
@@ -523,7 +575,7 @@ export const SlugData = [
         },
         bookNow: {
             title: "Your Dream 5-Bedroom Villa for an Unforgettable Getaway!",
-            subtitle: "Discover Luxery Living",
+            subTitle: "Discover Luxery Living",
         }
 
     },

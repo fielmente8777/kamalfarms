@@ -9,10 +9,6 @@ import { bannerData, slider1 } from "@/data/homepage";
 import { SlugData } from "@/data/SlugData";
 
 export default function Home() {
-
-
-
-
   return (
     <main>
       <BannerWithSlider {...bannerData} />

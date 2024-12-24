@@ -2,9 +2,8 @@
 
 import { Button, Container } from "@/components";
 import Image from "next/image";
-import Link from "next/link";
 import SliderSwip from "../SliderSwip";
-import { EffectFade, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import MainHeading from "../Heading/MainHeading";
 import Paragraph from "../Paragraph/Paragraph";
 import LinkComponent from "../Link/LinkComponent";
@@ -35,13 +34,13 @@ const BannerWithSlider: React.FC<BannerProps> = ({ data }) => {
           data={data}
           slidesPerView={1}
           spaceBetween={10}
-          modules={[Navigation, Pagination, EffectFade]}
+          modules={[Navigation, Pagination, EffectFade, Autoplay]}
           loop={true}
           autoplay={{
-            delay: 1000,
+            delay: 3000,
             disableOnInteraction: false,
           }}
-          speed="900"
+          speed="1000"
           effect={"fade"}
           // navigation={true}
           pagination={{
@@ -63,7 +62,10 @@ const BannerWithSlider: React.FC<BannerProps> = ({ data }) => {
                 <MainHeading title={item.title} />
                 <Paragraph className="mt-4" text={item.description} />
                 <div className="mt-12 flex gap-4 justify-center items-center w-full lg:justify-between">
-                  <LinkComponent href={item.pageLink.href || "/"} text={item.pageLink.label} />
+                  <LinkComponent
+                    href={item.pageLink.href || "/"}
+                    text={item.pageLink.label}
+                  />
                   <Button
                     href={item.btnLink.href || "/"}
                     label={item.btnLink.label}
@@ -73,9 +75,10 @@ const BannerWithSlider: React.FC<BannerProps> = ({ data }) => {
               </div>
             </div>
           )}
-
         </SliderSwip>
-        <div className="banner-pagination position absolute bottom-20 -right-1/3 z-10 flex gap-2 items-center justify-center"></div>
+        <div className="absolute bottom-28 right-[23%] transform translate-y-1/2  z-10">
+          <div className="banner-pagination flex gap-2 items-center justify-center"></div>
+        </div>
       </Container>
       <div className="absolute w-1/2 bg-bgclr -z-10 h-full top-0 left-0"></div>
     </section>

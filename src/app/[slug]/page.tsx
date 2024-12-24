@@ -1,46 +1,88 @@
-import { Banner, BookNowCard, SlideComponentImage, TestimonialMain } from "@/components";
+import {
+  Banner,
+  BookNowCard,
+  SlideComponentImage,
+  TestimonialMain,
+} from "@/components";
 import AmenitiesMain from "@/components/Amenities/AmenitiesMain";
 import SleepingMain from "@/components/SleepingArrangement.tsx/SleepingMain";
 import TwoColGridCard from "@/components/TwoColGridCard";
-import { slider1 } from "@/data/homepage";
 import { SlugData } from "@/data/SlugData";
-
-
+interface Params {
+  params: { slug: string };
+}
 export async function generateStaticParams() {
-  // const data = SlugData;
+  const data = SlugData;
 
-  return SlugData.map((data) => ({
+  return data.map((data) => ({
     slug: data.slug,
   }));
 }
 
-interface Params {
-  params: { slug: string };
-}
-const page = ({ params }: Params) => {
-
-
-  const data = SlugData.find((item) => item.slug === params.slug)
-  console.log(data)
+export async function generateMetadata({ params }: Params) {
+  const paramsData = await params.slug;
+  const data = SlugData.find((item) => item.slug === paramsData);
 
   if (!data) {
-    return <div>Page not found</div>
+    return { title: "Page not found" };
   }
 
+  return {
+    title: data.bannerData.title,
+    description: data.bannerData.desc[0],
+    openGraph: {
+      title: data.bannerData.title,
+      description: data.bannerData.desc[0],
+      url: `https://www.kamalfarmskarjat.com/${data.slug}`,
+      siteName: "Kamal Farms Karjat",
+      locale: "en-IN",
+      type: "website",
+      images: [
+        {
+          url: `https://www.kamalfarmskarjat.com/${data.slug}/og-image.png`,
+          width: 800,
+          height: 600,
+          alt: `www.kamalfarmskarjat.com/${data.slug}`,
+        },
+        {
+          url: `https://www.kamalfarmskarjat.com/${data.slug}/og-image.png`,
+          width: 900,
+          height: 800,
+          alt: `www.kamalfarmskarjat.com/${data.slug}`,
+        },
+        {
+          url: `https://www.kamalfarmskarjat.com/${data.slug}/og-image.png`,
+          width: 1000,
+          height: 800,
+          alt: `www.kamalfarmskarjat.com/${data.slug}`,
+        },
+      ],
+    },
+    alternate: {
+      languages: {
+        en: "/en/[slug]",
+      },
+      canonical: `https://www.kamalfarmskarjat.com/${data.slug}`,
+    },
+  };
+}
+
+const page = async ({ params }: Params) => {
+  const paramsData = await params.slug;
+  const data = SlugData.find((item) => item.slug === paramsData);
+
+  if (!data) {
+    return <div>Page not found</div>;
+  }
 
   return (
     <main>
-
       <Banner {...data.bannerData} />
-      <TwoColGridCard
-        {...data.experience}
-        index={1}
-      />
+      <TwoColGridCard {...data.experience} index={1} />
       <SleepingMain {...data.sleepingArrangement} />
       <AmenitiesMain {...data.amenities} />
       <SlideComponentImage {...data.gallery} />
       <TestimonialMain testimonialData={data.testimonial} />
-
 
       <BookNowCard {...data.bookNow} />
     </main>
