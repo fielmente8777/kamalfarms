@@ -28,8 +28,8 @@ const Navbar: React.FC = () => {
     <header className="bg-transparent relative top-0 left-0 w-full z-50 pb-2">
       <Container>
         <nav className="flex justify-between items-center">
-          <Link href="/" className="flex flex-col items-center ">
-            <span className="relative h-20 aspect-[4/2]">
+          <Link href="/" className="flex flex-col ">
+            <span className="relative lg:h-20 h-14 lg:aspect-[4/2] aspect-[4/1.35]">
               <Image
                 src="/Logo.svg"
                 alt="Kamalfarms"
@@ -37,8 +37,8 @@ const Navbar: React.FC = () => {
                 className="object-contain"
               />
             </span>
-            <span className="text-2xl capitalize tracking-wider font-bold text-primary nexa -mt-2">
-              <LogoName />
+            <span className="-inset-0.5 lg:h-[2rem] h-7 lg:aspect-[4/2] aspect-[4/1.35] top-0 relative ">
+              <span className="absolute top-0 left-0"><LogoName /></span>
             </span>
           </Link>
           <div className="lg:flex hidden items-center gap-4 text-base">
@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
                       href={link.link}
                       className={`flex items-center justify-center gap-2 px-4 py-2 duration-700 transition ease-linear hover:border-primary border-b-2 border-transparent ${
                         pathname === link.link
-                          ? "border-primary border-b-2 font-medium"
+                          ? "!border-primary font-medium"
                           : ""
                       }`}
                     >
@@ -85,7 +85,7 @@ const Navbar: React.FC = () => {
                             href={subLink.link}
                             className={`block px-4 py-2 duration-300 transition ease-in-out hover:border-primary border-b-2 border-transparent  ${
                               pathname === link.link
-                                ? "border-primary border-b-2 font-medium text-white"
+                                ? "!border-primary font-medium text-white"
                                 : ""
                             }`}
                           >

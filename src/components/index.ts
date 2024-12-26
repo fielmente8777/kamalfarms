@@ -13,8 +13,12 @@ import TestimonialMain from '@/components/Testimonial/TestimonialMain';
 import BannerWithSlider from './Banner/BannerWithSlider';
 import Banner from './Banner/Banner';
 import BookNowCard from './BookNowCard';
+import MainHeading from './Heading/MainHeading';
+import Paragraph from './Paragraph/Paragraph';
+import PopupForm from './PopupForm';
+import BreathtakingBanner from './Banner/BreathtakingBanner';
 export {
     Container, Section, SectionWithContainer, Navbar, Footer,
     LazyLoadedVideo, SEOVideo, Map, ImageSwiper, SlideComponentImage, Button,
-    TestimonialMain, BannerWithSlider, Banner, BookNowCard
+    TestimonialMain, BannerWithSlider, Banner, BookNowCard, MainHeading, Paragraph, PopupForm, BreathtakingBanner
 };

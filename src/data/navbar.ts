@@ -19,17 +19,17 @@ export const NavLink = [
             {
                 id: 1,
                 name: "5 Bedroom Riverview Villa",
-                link: "/5-bedroom-riverview-villa",
+                link: "/5-bedroom-riverview-villa/",
             },
             {
                 id: 2,
                 name: "3 Bedroom Riverside Cottage",
-                link: "/3-bedroom-riverside-cottage",
+                link: "/3-bedroom-riverside-cottage/",
             },
             {
                 id: 3,
                 name: "3 Bedroom Riverview Nest",
-                link: "/3-bedroom-riverview-nest",
+                link: "/3-bedroom-riverview-nest/",
             },
         ],
     },
@@ -41,24 +41,24 @@ export const NavLink = [
             {
                 id: 1,
                 name: "4.5 Bedroom Villa",
-                link: "/4.5-bedroom-villa",
+                link: "/4.5-bedroom-villa/",
             },
         ],
     },
     {
         id: 4,
         name: "Sustainability",
-        link: "/sustainability",
+        link: "/sustainability/",
     },
     {
         id: 5,
         name: "Events & More",
-        link: "/events-and-more",
+        link: "/events-and-more/",
     },
     {
         id: 6,
         name: "About Us",
-        link: "/about-us",
+        link: "/about-us/",
     },
     {
         id: 7,

@@ -3,10 +3,9 @@ import MainHeading from "./Heading/MainHeading";
 import Paragraph from "./Paragraph/Paragraph";
 import Section from "./SectionComponents/Section";
 
-
 interface BookNowDataProps {
   title: string;
-  subTitle: string;
+  subTitle?: string;
 }
 const BookNowCard: React.FC<BookNowDataProps> = ({ title, subTitle }) => {
   return (
@@ -15,14 +14,8 @@ const BookNowCard: React.FC<BookNowDataProps> = ({ title, subTitle }) => {
         <div className="grid lg:grid-cols-3 grid-cols-1 items-center justify-center gap-4 py-6 lg:px-8">
           <div className="col-span-2">
             <div className="flex flex-col gap-4">
-              <Paragraph
-                text={subTitle}
-                className="text-white"
-              />
-              <MainHeading
-                title={title}
-                className="text-white"
-              />
+              {subTitle && <Paragraph text={subTitle} className="text-white" />}
+              <MainHeading title={title} className="text-white" />
             </div>
           </div>
           <div className="col-span-1 flex items-center justify-center w-full h-full">

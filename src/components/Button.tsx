@@ -16,7 +16,7 @@ const Button: React.FC<ButtonProps> = ({
       href={href}
       target={newTabe ? "_blank" : "_self"}
       rel="noopener noreferrer"
-      className={`text-white bg-primary text-base py-3 px-4 rounded-sm font-medium hover:bg-primary/80 transition-colors duration-300 ease-in-out ${className}`}
+      className={`text-white bg-primary text-base py-3 px-4 description1 rounded-sm font-medium hover:bg-primary/80 transition-colors duration-300 ease-in-out ${className}`}
     >
       {label}
     </Link>

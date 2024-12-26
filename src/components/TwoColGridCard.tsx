@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from "next/image";
-import SectionWithContainer from "./SectionComponents/SectionWithContainer";
+import Section from "./SectionComponents/Section";
 import MainHeading from "./Heading/MainHeading";
 import Paragraph from "./Paragraph/Paragraph";
 import Button from "./Button";
@@ -30,12 +30,12 @@ const TwoColGridCard: React.FC<TwoColGridCardProps> = ({
     "col-span-3 row-span-1",
   ];
   return (
-    <SectionWithContainer>
+    <Section>
       <div
-        className={`grid lg:grid-cols-5 grid-cols-1 gap-2  ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"}`}
+        className={`lg:grid grid-cols-5 gap-4 lg:max-width  mx-auto ${index % 2 === 0 ? "lg:flex-col" : "lg:flex-col-reverse"}`}
       >
         <div
-          className={`col-span-3 w-full h-full ${index % 2 === 0 ? "order-1" : "order-2"}`}
+          className={`col-span-3 w-full h-full ${index % 2 === 0 ? "order-1 max-md:mt-4" : "order-2 max-md:mb-4"}`}
         >
           {src && (
             <div
@@ -51,18 +51,19 @@ const TwoColGridCard: React.FC<TwoColGridCardProps> = ({
           )}
           {arrImages && (
             <div
-              className={`grid grid-cols-6 lg:auto-rows-[17rem] auto-rows-[8rem] gap-1 w-full h-full rounded-sm ${index % 2 === 0 ? "order-1" : "order-2"}`}
+              className={`grid grid-cols-6 lg:auto-rows-[19rem] auto-rows-[8rem] gap-1 w-full h-full rounded-sm ${index % 2 === 0 ? "order-1" : "order-2"}`}
             >
               {arrImages.map((image, index) => (
                 <div
-                  className={`${gridPattern[index % gridPattern.length]
-                    } relative w-full aspect-auto rounded-sm overflow-hidden`}
+                  className={`${
+                    gridPattern[index % gridPattern.length]
+                  } relative w-full aspect-auto rounded-sm overflow-hidden`}
                   key={index}
                 >
                   <Image
                     src={image}
                     alt={title}
-                    className="w-full h-48 object-cover "
+                    className="w-full h-48 object-cover"
                     fill
                   />
                 </div>
@@ -70,12 +71,14 @@ const TwoColGridCard: React.FC<TwoColGridCardProps> = ({
             </div>
           )}
         </div>
-        <div className={`p-4 flex flex-col gap-4 justify-center col-span-2 ${index % 2 === 0 ? "order-2" : "order-1"}`}>
+        <div
+          className={` flex flex-col gap-4 col-span-2 max-width  ${index % 2 === 0 ? "order-2" : "order-1"}`}
+        >
           {title && <MainHeading title={title} />}
           {subTitle && <MainHeading title={subTitle} />}
           {description && <Paragraph text={description} />}
           {list && (
-            <ul className="text-gray-600 list-disc pl-4 flex flex-col gap-1">
+            <ul className="text-gray-600 list-disc pl-4 flex flex-col gap-3">
               {list.map((item, index) => (
                 <li key={index} className="description1">
                   {item}
@@ -83,10 +86,14 @@ const TwoColGridCard: React.FC<TwoColGridCardProps> = ({
               ))}
             </ul>
           )}
-          <Button href="/contact-us" label="Contact Us" className="mt-4 w-fit" />
+          <Button
+            href="/contact-us"
+            label="Contact Us"
+            className="mt-2 w-fit"
+          />
         </div>
       </div>
-    </SectionWithContainer>
+    </Section>
   );
 };
 

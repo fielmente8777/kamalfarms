@@ -1,14 +1,8 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Autoplay,
-  Navigation,
-  EffectCoverflow,
-  Pagination,
-} from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
@@ -17,7 +11,7 @@ import { NextButton, PrevButton } from "../icons/icons";
 import MainHeading from "./Heading/MainHeading";
 import LinkComponent from "./Link/LinkComponent";
 
-interface ImageSwiperProps {
+export interface ImageSwiperProps {
   images: {
     src: string;
     title?: string;
@@ -50,13 +44,11 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
     <div className="w-full bg-transparent slider relative">
       <Swiper
         speed={1000}
-        effect={"coverflow"}
-        grabCursor={true}
         centeredSlides={true}
         loop={true}
-        slidesPerView={1}
+        slidesPerView={1.3}
         spaceBetween={10}
-        modules={[Autoplay, Navigation, EffectCoverflow, Pagination]}
+        modules={[Autoplay, Navigation, Pagination]}
         navigation={{
           nextEl: swiperButtonNext,
           prevEl: swiperButtonPrev,
@@ -65,38 +57,45 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
           el: "." + paginationClass,
           clickable: true,
         }}
-        coverflowEffect={{
-          rotate: 0,
-          depth: 0,
-          modifier: 10,
-          slideShadows: false,
-        }}
         breakpoints={{
           768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
+            slidesPerView: 1.9,
+            spaceBetween: 15,
           },
         }}
       >
         {images?.map((item, idx) => (
           <SwiperSlide key={idx} className="w-full h-full">
             <div className="w-full h-full">
-              <div className="w-full h-full relative lg:aspect-[4/2.5] aspect-[3/2.5]">
+              <div className="w-full h-full relative lg:aspect-[4/2.5] aspect-[3/2.8]">
                 <Image
                   src={item.src}
                   className="h-full object-cover"
-                  alt={"room"}
+                  alt={item.alt ? item.alt : "restaurant img"}
                   fill
                 />
+                {item.alt && (
+                  <p className="text-white description1 text-center absolute bottom-2 -translate-x-1/2 left-1/2 bg-black/50 p-2">
+                    {item.alt}
+                  </p>
+                )}
               </div>
               {details && (
-                <div className=" bg-white p-7 -mt-10 w-full max-w-[44rem] flex items-center justify-center relative z-10 mx-auto">
+                <div className=" bg-white p-7 -mt-10 w-full lg:max-w-[44rem] max-w-[18rem] flex items-center justify-center relative z-10 mx-auto">
                   <div className="w-full h-full flex flex-col items-center justify-center gap-3">
-                    {item.title && <MainHeading title={item.title} />}
+                    {item.title && (
+                      <MainHeading
+                        title={item.title}
+                        className="text-center !heading3"
+                        h3
+                        h2={false}
+                      />
+                    )}
                     {item.description && (
-                      <p className="text-textlight text-base text-center">
-                        {item.description}
-                      </p>
+                      <p
+                        className="text-textlight description1 text-base text-center"
+                        dangerouslySetInnerHTML={{ __html: item.description }}
+                      ></p>
                     )}
                     {/* <Link href={item.link.href} className="text-primary font-medium border-primary/60 border-b-2">{item.link.label}</Link> */}
                     {item.link && (
@@ -128,7 +127,7 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
         </button>
       </div>
       {details && (
-        <div className=" w-full bg-bgclr h-[35rem] absolute top-1/3 z-0"></div>
+        <div className=" w-full bg-bgclr lg:h-[35rem] h-[69%] absolute top-1/3 z-0"></div>
       )}
     </div>
   );

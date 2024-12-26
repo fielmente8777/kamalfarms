@@ -14,7 +14,7 @@ const Banner: React.FC<BannerProps> = ({ title, images, desc }) => {
       <Container>
         <div className="grid grid-cols-3 w-full items-center justify-center">
           <div className="col-span-1">
-            <div className="relative lg:h-[240px] lg:aspect-[4/1.58] lg:left-24 left-10 aspect-[4/2.6]">
+            <div className="relative lg:h-[280px] h-[5.6rem] lg:aspect-auto  lg:w-[37.5rem] lg:left-24 lg:-top-10  aspect-[4/1.95]">
               <Image
                 src={images[0]}
                 alt="alt"
@@ -36,7 +36,7 @@ const Banner: React.FC<BannerProps> = ({ title, images, desc }) => {
         </div>
         <div className="relative w-full max-w-4xl bg-white z-20 h-full lg:-top-24  shadow-xl">
           <div className="flex flex-col gap-4 h-full w-full lg:p-14 p-2 z-30 bg-white">
-            <MainHeading title={title} />
+            <MainHeading title={title} h1 h2={false}/>
             {desc.map((item, index) => (
               <Paragraph
                 className="text-textdark !text-start description1"
@@ -47,7 +47,7 @@ const Banner: React.FC<BannerProps> = ({ title, images, desc }) => {
           </div>
         </div>
       </Container>
-      <div className="absolute w-1/2 bg-bgclr -z-10 lg:h-full h-1/2 top-0 left-0"></div>
+      <div className="absolute lg:w-1/2 w-[80%] bg-bgclr -z-10 lg:h-full h-1/2 top-0 left-0"></div>
     </section>
   );
 };

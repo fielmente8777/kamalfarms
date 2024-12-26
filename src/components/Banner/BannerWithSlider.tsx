@@ -36,12 +36,16 @@ const BannerWithSlider: React.FC<BannerProps> = ({ data }) => {
           spaceBetween={10}
           modules={[Navigation, Pagination, EffectFade, Autoplay]}
           loop={true}
+          crossFade={true}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
           }}
           speed="1000"
-          effect={"fade"}
+          effect={'fade'}
+          fadeEffect={{
+            crossFade: true,
+          }}
           // navigation={true}
           pagination={{
             el: ".banner-pagination",
@@ -58,10 +62,13 @@ const BannerWithSlider: React.FC<BannerProps> = ({ data }) => {
                   className="object-cover"
                 />
               </div>
-              <div className="flex flex-col justify-center items-center lg:ps-16 lg:pe-2 col-span-1 bg-white">
-                <MainHeading title={item.title} />
-                <Paragraph className="mt-4" text={item.description} />
-                <div className="mt-12 flex gap-4 justify-center items-center w-full lg:justify-between">
+              <div className="flex flex-col justify-center max-md:mt-2 items-center lg:ps-16 lg:pe-2 col-span-1 bg-white">
+                <MainHeading title={item.title} h1 h2={false} />
+                <Paragraph
+                  className="mt-4 description1"
+                  text={item.description}
+                />
+                <div className="lg:mt-12 my-5 flex gap-4 justify-between items-center w-full lg:justify-between">
                   <LinkComponent
                     href={item.pageLink.href || "/"}
                     text={item.pageLink.label}
@@ -76,11 +83,11 @@ const BannerWithSlider: React.FC<BannerProps> = ({ data }) => {
             </div>
           )}
         </SliderSwip>
-        <div className="absolute bottom-28 right-[23%] transform translate-y-1/2  z-10">
+        <div className="lg:absolute bottom-28 right-[23%] transform translate-y-1/2  z-10">
           <div className="banner-pagination flex gap-2 items-center justify-center"></div>
         </div>
       </Container>
-      <div className="absolute w-1/2 bg-bgclr -z-10 h-full top-0 left-0"></div>
+      <div className="absolute lg:w-1/2 w-[80%] bg-bgclr -z-10 lg:h-full h-[35%] top-0 left-0"></div>
     </section>
   );
 };

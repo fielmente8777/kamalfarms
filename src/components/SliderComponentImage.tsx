@@ -34,34 +34,32 @@ const SliderComponentImage: React.FC<SliderComponentImageProps> = ({
   paginationClass,
 }) => {
   return (
-    <Section className="bg-[#ffffff]">
-      <Section>
-        {title && (
-          <Container>
-            <div className="flex flex-col items-center justify-center gap-5">
-              <div className="flex flex-col gap-5">
-                <MainHeading className={"text-center "} title={title} />
-                {description && (
-                  <Paragraph
-                    className={"text-center max-w-2xl"}
-                    text={description}
-                  />
-                )}
-              </div>
+    <Section>
+      {title && (
+        <Container>
+          <div className="flex flex-col items-center justify-center gap-5 mb-2">
+            <div className="flex flex-col gap-5">
+              <MainHeading className={"text-center "} title={title} />
+              {description && (
+                <Paragraph
+                  className={"text-center max-w-2xl "}
+                  text={description}
+                />
+              )}
             </div>
-          </Container>
-        )}
+          </div>
+        </Container>
+      )}
 
-        <div className={`${title && "lg:mt-12 "} block`}>
-          <ImageSwiper
-            images={images}
-            index={index}
-            btnName={btnName}
-            paginationClass={paginationClass}
-            details={details}
-          />
-        </div>
-      </Section>
+      <div className={`lg:mt-12 mt-4 block`}>
+        <ImageSwiper
+          images={images}
+          index={index}
+          btnName={btnName}
+          paginationClass={paginationClass}
+          details={details}
+        />
+      </div>
     </Section>
   );
 };

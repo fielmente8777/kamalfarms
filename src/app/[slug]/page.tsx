@@ -9,7 +9,7 @@ import SleepingMain from "@/components/SleepingArrangement.tsx/SleepingMain";
 import TwoColGridCard from "@/components/TwoColGridCard";
 import { SlugData } from "@/data/SlugData";
 interface Params {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 export async function generateStaticParams() {
   const data = SlugData;
@@ -19,7 +19,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: Params) {
+export async function generateMetadata(props: Params) {
+  const params = await props.params;
   const paramsData = await params.slug;
   const data = SlugData.find((item) => item.slug === paramsData);
 
@@ -67,7 +68,8 @@ export async function generateMetadata({ params }: Params) {
   };
 }
 
-const page = async ({ params }: Params) => {
+const page = async (props: Params) => {
+  const params = await props.params;
   const paramsData = await params.slug;
   const data = SlugData.find((item) => item.slug === paramsData);
 
