@@ -41,7 +41,7 @@ export const NavLink = [
             {
                 id: 1,
                 name: "4.5 Bedroom Villa",
-                link: "/4.5-bedroom-villa/",
+                link: "/4_5-bedroom-villa/",
             },
         ],
     },

@@ -16,6 +16,7 @@ export async function generateStaticParams() {
 
   return data.map((data) => ({
     slug: data.slug,
+    fallback: false,
   }));
 }
 

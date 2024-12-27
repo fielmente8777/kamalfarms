@@ -27,8 +27,8 @@ interface slugDataProps {
     title: string;
     data: {
       name: string;
-      type1: string;
-      type2: string;
+      type1?: string;
+      type2?: string;
     }[];
   };
   amenities: {
@@ -176,24 +176,76 @@ export const SlugData: slugDataProps[] = [
       title: "Gallery",
       images: [
         {
-          src: "/outside.jpeg",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/5-bedroom-riverview-villa/asset+17.webp",
           alt: "Front View",
         },
         {
-          src: "/outside.jpeg",
-          alt: "Front View",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/5-bedroom-riverview-villa/asset+18.webp",
+          alt: "Lawn View",
         },
         {
-          src: "/outside.jpeg",
-          alt: "Front View",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/5-bedroom-riverview-villa/asset+19.webp",
+          alt: "Living Room First Floor - Overview",
         },
         {
-          src: "/outside.jpeg",
-          alt: "Front View",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/5-bedroom-riverview-villa/asset+20.webp",
+          alt: "Living Room First Floor - Seating",
         },
         {
-          src: "/outside.jpeg",
-          alt: "Front View",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/5-bedroom-riverview-villa/asset+21.webp",
+          alt: "Living Room First Floor - Dining",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/5-bedroom-riverview-villa/asset+22.webp",
+          alt: "Bedroom 1",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/5-bedroom-riverview-villa/asset+23.webp",
+          alt: "Bathroom 1",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/5-bedroom-riverview-villa/asset+24.webp",
+          alt: "Bedroom 2",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/5-bedroom-riverview-villa/asset+25.webp",
+          alt: "Bedroom 3",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/5-bedroom-riverview-villa/asset+26.webp",
+          alt: "Living Room Ground Floor - Seating",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/5-bedroom-riverview-villa/asset+27.webp",
+          alt: "Living Room First Floor - Table Tennis",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/5-bedroom-riverview-villa/asset+28.webp",
+          alt: "Bedroom 4",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/5-bedroom-riverview-villa/asset+29.webp",
+          alt: "Bathroom 4",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/5-bedroom-riverview-villa/asset+30.webp",
+          alt: "Bedroom 5",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/5-bedroom-riverview-villa/asset+31.webp",
+          alt: "Outdoor Seating",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/5-bedroom-riverview-villa/asset+32.webp",
+          alt: "Indoor Games",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/5-bedroom-riverview-villa/asset+33.webp",
+          alt: "Swing Area",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/5-bedroom-riverview-villa/asset+34.webp",
+          alt: "Garden & River",
         },
       ],
     },
@@ -258,6 +310,10 @@ export const SlugData: slugDataProps[] = [
           type1: "1 King Bedroom",
           type2: "1 Queen Bedroom",
         },
+        {
+          name: "Living Room",
+          type1: "Sofa cum bed",
+        },
       ],
     },
     amenities: {
@@ -302,24 +358,64 @@ export const SlugData: slugDataProps[] = [
       title: "Gallery",
       images: [
         {
-          src: "/outside.jpeg",
-          alt: "Front View",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverside-cottage/asset+17.webp",
+          alt: "View from the River",
         },
         {
-          src: "/outside.jpeg",
-          alt: "Front View",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverside-cottage/asset+18.webp",
+          alt: "Balcony & Garden",
         },
         {
-          src: "/outside.jpeg",
-          alt: "Front View",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverside-cottage/asset+19.webp",
+          alt: "Balcony Seating",
         },
         {
-          src: "/outside.jpeg",
-          alt: "Front View",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverside-cottage/asset+20.webp",
+          alt: "Living Room - Overview",
         },
         {
-          src: "/outside.jpeg",
-          alt: "Front View",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverside-cottage/asset+21.webp",
+          alt: "Living Room - Dining",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverside-cottage/asset+22.webp",
+          alt: "Living Room - Seating",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverside-cottage/asset+23.webp",
+          alt: "Bedroom 1 - Overview",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverside-cottage/asset+24.webp",
+          alt: "Bedroom 1 - Close Up",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverside-cottage/asset+25.webp",
+          alt: "Bedroom 1 - Bathroom",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverside-cottage/asset+26.webp",
+          alt: "Bedroom 2 - Overview",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverside-cottage/asset+27.webp",
+          alt: "Bedroom 2 - Close Up",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverside-cottage/asset+28.webp",
+          alt: "Bedroom 3 - Overview",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverside-cottage/asset+29.webp",
+          alt: "Bedroom 3 - Close Up",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverside-cottage/asset+30.webp",
+          alt: "Balcony & River",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverside-cottage/asset+31.webp",
+          alt: "Pej River",
         },
       ],
     },
@@ -367,33 +463,19 @@ export const SlugData: slugDataProps[] = [
       data: [
         {
           name: "Bedroom 1",
-          type1: "1 King Bedroom",
-          type2: "1 Queen Bedroom",
+          type1: "1 King Bed",
         },
         {
           name: "Bedroom 2",
-          type1: "1 King Bedroom",
-          type2: "1 Queen Bedroom",
+          type1: "1 King Bed",
         },
         {
           name: "Bedroom 3",
-          type1: "1 King Bedroom",
-          type2: "1 Queen Bedroom",
+          type1: "1 King Bed",
         },
         {
-          name: "Bedroom 4",
-          type1: "1 King Bedroom",
-          type2: "1 Queen Bedroom",
-        },
-        {
-          name: "Bedroom 5",
-          type1: "1 King Bedroom",
-          type2: "1 Queen Bedroom",
-        },
-        {
-          name: "Loft",
-          type1: "10 Floor",
-          type2: "Mattresses",
+          name: "Living Room",
+          type1: "Sofa cum bed",
         },
       ],
     },
@@ -471,7 +553,7 @@ export const SlugData: slugDataProps[] = [
   },
   {
     id: "4",
-    slug: "4.5-bedroom-villa",
+    slug: "4_5-bedroom-villa",
     bannerData: {
       images: [
         "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/4.5-bedroom-villa/image+1.webp",
@@ -506,33 +588,23 @@ export const SlugData: slugDataProps[] = [
       data: [
         {
           name: "Bedroom 1",
-          type1: "1 King Bedroom",
-          type2: "1 Queen Bedroom",
+          type2: "1 Queen Bed",
         },
         {
           name: "Bedroom 2",
-          type1: "1 King Bedroom",
-          type2: "1 Queen Bedroom",
+          type2: "1 Queen Bed",
         },
         {
           name: "Bedroom 3",
-          type1: "1 King Bedroom",
-          type2: "1 Queen Bedroom",
+          type2: "1 Queen Bed",
         },
         {
           name: "Bedroom 4",
-          type1: "1 King Bedroom",
-          type2: "1 Queen Bedroom",
+          type2: "1 Queen Bed",
         },
         {
           name: "Bedroom 5",
-          type1: "1 King Bedroom",
-          type2: "1 Queen Bedroom",
-        },
-        {
-          name: "Loft",
-          type1: "10 Floor",
-          type2: "Mattresses",
+          type2: "Mini queen bed",
         },
       ],
     },

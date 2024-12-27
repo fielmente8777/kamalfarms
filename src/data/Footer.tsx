@@ -28,7 +28,7 @@ export const StayInPanchgani: FooterProps[] = [
   {
     id: 1,
     text: "4.5 Bedroom Villa",
-    link: "/4.5-bedroom-villa",
+    link: "/4_5-bedroom-villa",
   },
 ];
 

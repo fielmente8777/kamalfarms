@@ -49,7 +49,7 @@ export const slider1 = {
     description: `"Discover Our Unique Properties in Karjat and Panchgani – Your Gateway to Tranquil Retreats and Scenic Adventures."`,
     images: [
         {
-            src: "/outside.jpeg",
+            src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/home/asset+6.webp",
             title: "3 Bedroom Riverside Cottage",
             description: "Imagine waking up to the sound of a river in the comfort of a cozy cottage. This homely abode expands across 2000 sq.ft., in <strong>Karjat</strong> and accommodates up to 8 guests. The Riverside cottage is perfect for intimate gatherings.",
             link: {
@@ -58,7 +58,7 @@ export const slider1 = {
             }
         },
         {
-            src: "/outside.jpeg",
+            src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/4.5-bedroom-villa/image+2.webp",
             title: "4.5 Bedroom Villa",
             description: "SaffronStays Breeze Over The Valley is an exclusive 4.5-bedroom vegetarian-friendly villa in <strong>Panchgani</strong>, just 5 minutes from Mapro Garden. Surrounded by lush lawns, it offers indoor and outdoor games, a bonfire, and panoramic views. With modern amenities and tastefully decorated rooms, the villa is a 2.5-hour drive from Pune and easily accessible from Mumbai.",
             link: {
@@ -67,7 +67,7 @@ export const slider1 = {
             }
         },
         {
-            src: "/outside.jpeg",
+            src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/home/asset+5.webp",
             title: "5 Bedroom Riverview Villa",
             description: "Spread across 6000 sq.ft, in <strong>Karjat</strong>, the riverview villa offers 5 bedrooms which can lend itself to upto 32 guests. Every bedroom offers abundance of space and privacy. Spending your holiday at the riverview villa is all you need to unwind and relax with your family and friends.",
             link: {
