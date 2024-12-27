@@ -118,7 +118,7 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
           <PrevButton />
         </button>
         <div
-          className={`flex items-center justify-center gap-1 ${paginationClass}`}
+          className={`lg:flex md:flex hidden items-center justify-center gap-1 ${paginationClass}`}
         />
         <button
           className={`button-next-${buttonName} p-2 hover:scale-105 border border-transparent rounded-sm hover:shadow-xl shadow-secondary hover:border-secondary active:scale-95`}
