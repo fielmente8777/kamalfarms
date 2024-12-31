@@ -35,7 +35,7 @@ const TwoColGridCard: React.FC<TwoColGridCardProps> = ({
         className={`lg:grid grid-cols-5 gap-4 lg:max-width  mx-auto ${index % 2 === 0 ? "lg:flex-col" : "lg:flex-col-reverse"}`}
       >
         <div
-          className={`col-span-3 w-full h-full ${index % 2 === 0 ? "order-1 max-md:mt-4" : "order-2 max-md:mb-4"}`}
+          className={`col-span-3 mb-5 w-full h-full ${index % 2 === 0 ? "order-1 max-md:mt-4" : "order-2 max-md:mb-4"}`}
         >
           {src && (
             <div
@@ -80,8 +80,7 @@ const TwoColGridCard: React.FC<TwoColGridCardProps> = ({
           {list && (
             <ul className="text-gray-600 list-disc pl-4 flex flex-col gap-3">
               {list.map((item, index) => (
-                <li key={index} className="description1">
-                  {item}
+                <li key={index} className="description1 text-textdark" dangerouslySetInnerHTML={{ __html: item }}>
                 </li>
               ))}
             </ul>

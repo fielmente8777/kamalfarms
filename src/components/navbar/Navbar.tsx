@@ -48,8 +48,8 @@ const Navbar: React.FC = () => {
                   {link.id === 2 || link.id === 3 ? (
                     <span
                       className={`flex items-center justify-center gap-2 px-4 cursor-pointer py-2 duration-700 transition ease-linear hover:border-primary border-b-2 border-transparent ${
-                        pathname === link.link
-                          ? "border-primary border-b-2 font-medium text-white"
+                        pathname === link.subLinks?.[0]?.link
+                          ? "font-medium"
                           : ""
                       }`}
                     >
@@ -84,8 +84,8 @@ const Navbar: React.FC = () => {
                           <Link
                             href={subLink.link}
                             className={`block px-4 py-2 duration-300 transition ease-in-out hover:border-primary border-b-2 border-transparent  ${
-                              pathname === link.link
-                                ? "!border-primary font-medium text-white"
+                              pathname === subLink.link
+                                ? "!border-primary font-medium"
                                 : ""
                             }`}
                           >

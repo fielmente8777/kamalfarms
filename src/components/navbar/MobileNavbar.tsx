@@ -22,8 +22,8 @@ export const MobileNavbar = ({
               {link.id === 2 || link.id === 3 ? (
                 <span
                   className={`flex items-center gap-2 px-2 py-2 ${
-                    pathname === link.link
-                      ? "border-primary border-l-2 text-white"
+                    pathname === link.subLinks?.[0]?.link
+                      ? "font-medium"
                       : ""
                   }`}
                   onClick={() => setIsOpenDropdown(link.id)}
@@ -42,7 +42,7 @@ export const MobileNavbar = ({
                   href={link.link}
                   className={`flex items-center gap-2 px-2 py-2 ${
                     pathname === link.link
-                      ? "border-primary border-l-2 text-white"
+                      ? "border-primary border-l-2 font-medium"
                       : ""
                   }`}
                   onClick={() => setIsOpen(false)}
@@ -59,7 +59,10 @@ export const MobileNavbar = ({
                 <ul className=" bg-white">
                   {link.subLinks.map((subLink) => (
                     <li key={subLink.id} onClick={() => setIsOpen(false)}>
-                      <Link href={subLink.link} className="block px-4 py-2">
+                      <Link
+                        href={subLink.link}
+                        className={`block px-4 py-2 ${pathname === subLink.link ? "font-medium border-primary border-l-2" : ""}`}
+                      >
                         {subLink.name}
                       </Link>
                     </li>

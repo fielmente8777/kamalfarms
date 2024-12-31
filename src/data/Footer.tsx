@@ -56,11 +56,11 @@ export const FollowUs: FooterProps[] = [
   {
     id: 1,
     icon: <Facebook />,
-    link: "#",
+    link: "https://www.facebook.com/kamalfarmskarjat/",
   },
   {
     id: 2,
     icon: <Insta />,
-    link: "#",
+    link: "https://www.instagram.com/kamalfarms/",
   },
 ];

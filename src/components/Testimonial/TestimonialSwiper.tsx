@@ -38,13 +38,13 @@ const TestimonialSwiper: React.FC<TestimonialCard> = ({ data }) => {
             spaceBetween: 20,
           },
           1440: {
-            slidesPerView: 5,
+            slidesPerView: 4,
             spaceBetween: 20,
           },
         }}
       >
         {data?.map((testimonial, index) => (
-          <SwiperSlide key={index} className="w-full h-full ">
+          <SwiperSlide key={index} className="w-full h-full  bg-bgclr">
             <TestimonialCard key={index} {...testimonial} />
           </SwiperSlide>
         ))}

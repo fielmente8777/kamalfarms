@@ -13,7 +13,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   icon,
 }) => {
   return (
-    <div className=" flex flex-col gap-5 justify-center items-center py-5 px-4 bg-bgclr">
+    <div className=" flex flex-col gap-5  items-center py-5 px-4 bg-bgclr w-full min-h-[24.5rem] h-full">
       <span>{icon}</span>
       <Paragraph className={"text-center text-textlight"} text={text} />
       <span className="text-base font-semibold">{name}</span>

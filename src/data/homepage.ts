@@ -86,3 +86,14 @@ export const slider1 = {
         }
     ]
 }
+
+
+export const breathtakingBannerData = {
+    title: "Breathtaking Villas & Cottages for a Perfect Getaway",
+    desc: ["Kamal Farms is located approximately 70 kilometers away from Mumbai and 100 kilometers from Pune in the small town of Karjat. Situated on the banks of Pej river, blessed trees and an expansive farm spread across 10,000 sq.ft of land. It is a perfect location to host visitors with absolute care."],
+    image: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/home/asset+5.webp",
+    btnName: {
+        href: "/contact-us",
+        label: "Contact Us"
+    }
+}

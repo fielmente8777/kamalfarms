@@ -5,34 +5,68 @@ import Paragraph from "../Paragraph/Paragraph";
 import { LocationOrange } from "@/icons/icons";
 import Button from "../Button";
 
-const BreathtakingBanner = () => {
+interface Props {
+  title: string;
+  image: string;
+  desc: string[];
+  btnName: {
+    href: string;
+    label: string;
+  };
+  index?: number;
+  icon?: boolean;
+  contentClassName?: string;
+  textStart?: boolean;
+  center?: boolean;
+}
+const BreathtakingBanner: React.FC<Props> = ({
+  title,
+  image,
+  desc,
+  btnName,
+  index = 0,
+  icon = false,
+  contentClassName = "",
+  textStart = false,
+  center = false,
+}) => {
   return (
     <SectionWithContainer>
-      <div className="grid lg:grid-cols-3 grid-cols-1 w-full items-center justify-center lg:relative">
-        <div className="col-span-2 w-full ">
+      <div
+        className={`lg:grid grid-cols-3 flex  ${index % 2 !== 0 ? "flex-col-reverse" : "flex-col"} w-full items-center justify-center lg:relative`}
+      >
+        <div
+          className={`col-span-2 w-full ${index % 2 === 0 ? "order-1" : "order-2"}`}
+        >
           <div className="relative w-full lg:aspect-[4/2.6] aspect-square">
-            <Image
-              src="https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/home/asset+5.webp"
-              alt="alt"
-              fill
-              className="object-cover"
-            />
+            <Image src={image} alt={title} fill className="object-cover" />
           </div>
         </div>
-        <div className="col-span-1 max-md:relative">
-          <div className="lg:absolute bg-bgclr lg:w-[48rem] w-[16.5rem] max-md:mx-auto lg:right-0 lg:bottom-[12%] -mt-5 z-10 lg:p-8 p-4 flex items-center justify-center gap-5 flex-col">
-            <div>
-              <LocationOrange />
-            </div>
+        <div
+          className={`col-span-1 max-md:relative ${index % 2 === 0 ? "order-2" : "order-1"}`}
+        >
+          <div
+            className={`lg:absolute ${contentClassName ? contentClassName : "bg-bgclr"} shadow-2xl lg:w-[46rem] w-[19rem] max-md:mx-auto ${index % 2 === 0 ? "lg:right-0" : "lg:left-0"} lg:bottom-[12%] relative -top-5 z-10 lg:p-12 py-7 px-4 flex ${!center ? "items-start justify-start" : "items-center justify-center"} gap-7 flex-col`}
+          >
+            {icon && (
+              <div>
+                <LocationOrange />
+              </div>
+            )}
             <MainHeading
-              title="Breathtaking Villas & Cottages for a Perfect Getaway"
-              className="w-full text-center"
+              title={title}
+              className={`w-full  ${textStart ? "text-start" : "text-center"}`}
             />
-            <Paragraph
-              className="text-center text-textdark"
-              text="Kamal Farms is located approximately 70 kilometers away from Mumbai and 100 kilometers from Pune in the small town of Karjat. Situated on the banks of Pej river, blessed trees and an expansive farm spread across 10,000 sq.ft of land. It is a perfect location to host visitors with absolute care."
-            />
-            <Button href="/contact-us" label="Contact Us" />
+            {desc.map((item, index) => (
+              <Paragraph
+                className={` text-textdark  ${textStart ? "text-start" : "text-center"}`}
+                text={item}
+                key={index}
+              />
+            ))}
+            <div>
+              <Button href={btnName.href} label={btnName.label} />
+            </div>
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@ import MainHeading from "./Heading/MainHeading";
 import ImageSwiper from "./ImageSwiper";
 import Paragraph from "./Paragraph/Paragraph";
 import Section from "./SectionComponents/Section";
+import ImageSwiper2 from "./ImageSwiper2";
 
 interface SliderComponentImageProps {
   title: string;
@@ -22,6 +23,8 @@ interface SliderComponentImageProps {
   paginationClass?: string;
   descMaxWidth?: boolean;
   details?: boolean;
+  imageSwiper?: boolean;
+  imageSwiper2?: boolean;
 }
 
 const SliderComponentImage: React.FC<SliderComponentImageProps> = ({
@@ -32,6 +35,8 @@ const SliderComponentImage: React.FC<SliderComponentImageProps> = ({
   btnName,
   details,
   paginationClass,
+  imageSwiper = true,
+  imageSwiper2 = false,
 }) => {
   return (
     <Section>
@@ -52,13 +57,21 @@ const SliderComponentImage: React.FC<SliderComponentImageProps> = ({
       )}
 
       <div className={`lg:mt-12 mt-4 block`}>
-        <ImageSwiper
-          images={images}
-          index={index}
-          btnName={btnName}
-          paginationClass={paginationClass}
-          details={details}
-        />
+        {imageSwiper && (
+          <ImageSwiper
+            images={images}
+            index={index}
+            btnName={btnName}
+            paginationClass={paginationClass}
+            details={details}
+          />
+        )}
+        {imageSwiper2 && (
+          <ImageSwiper2
+            images={images}
+            details={details}
+          />
+        )}
       </div>
     </Section>
   );
