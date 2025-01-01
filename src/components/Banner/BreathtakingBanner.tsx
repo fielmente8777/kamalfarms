@@ -33,7 +33,7 @@ const BreathtakingBanner: React.FC<Props> = ({
   return (
     <SectionWithContainer>
       <div
-        className={`lg:grid grid-cols-3 flex  ${index % 2 !== 0 ? "flex-col-reverse" : "flex-col"} w-full items-center justify-center lg:relative`}
+        className={`lg:grid grid-cols-3 flex  ${index % 2 !== 0 ? "flex-col-reverse" : "flex-col"} w-full items-center justify-center`}
       >
         <div
           className={`col-span-2 w-full ${index % 2 === 0 ? "order-1" : "order-2"}`}
@@ -43,10 +43,10 @@ const BreathtakingBanner: React.FC<Props> = ({
           </div>
         </div>
         <div
-          className={`col-span-1 max-md:relative ${index % 2 === 0 ? "order-2" : "order-1"}`}
+          className={`col-span-1 w-full h-full relative ${index % 2 === 0 ? "order-2" : "order-1"}`}
         >
           <div
-            className={`lg:absolute ${contentClassName ? contentClassName : "bg-bgclr"} shadow-2xl lg:w-[46rem] w-[19rem] max-md:mx-auto ${index % 2 === 0 ? "lg:right-0" : "lg:left-0"} lg:bottom-[12%] relative max-md:-top-5 z-10 lg:p-12 py-7 px-4 flex ${!center ? "items-start justify-start" : "items-center justify-center"} gap-7 flex-col`}
+            className={`lg:absolute ${contentClassName ? contentClassName : "bg-bgclr"} shadow-2xl lg:w-[46rem] w-[19rem] ${index % 2 === 0 ? "lg:right-0 lg:-translate-y-1/2" : "lg:left-0 lg:-translate-y-1/2"} lg:top-1/2 relative -top-5 max-md:mx-auto  transform   z-10 lg:p-12 py-7 px-4 flex ${!center ? "items-start justify-start" : "items-center justify-center"} gap-7 flex-col`}
           >
             {icon && (
               <div>

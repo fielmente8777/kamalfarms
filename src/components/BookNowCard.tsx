@@ -12,14 +12,14 @@ const BookNowCard: React.FC<BookNowDataProps> = ({ title, subTitle }) => {
   return (
     <SectionWithContainer containerClassName="bg-secondary">
       {/* <div className="max-width mx-auto bg-secondary "> */}
-      <div className="grid lg:grid-cols-5 grid-cols-1 items-center justify-center gap-4 py-6 lg:px-8">
-        <div className="col-span-4">
+      <div className="grid lg:grid-cols-5 grid-cols-1 w-full items-center justify-center gap-4 py-6 lg:px-8">
+        <div className="col-span-4 w-full h-full flex items-center justify-center">
           <div className="flex flex-col gap-4">
             {subTitle && <Paragraph text={subTitle} className="text-white" />}
             <MainHeading title={title} className="text-white" />
           </div>
         </div>
-        <div className="col-span-1 flex items-center justify-center w-full h-full">
+        <div className="col-span-4 lg:col-span-1 flex items-center justify-center w-full h-full">
           <Button
             href="/book-now"
             label="Book Now"
