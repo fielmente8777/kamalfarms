@@ -521,25 +521,37 @@ export const SlugData: slugDataProps[] = [
       title: "Gallery",
       images: [
         {
-          src: "/outside.jpeg",
-          alt: "Front View",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverview-nest/image+8.webp",
+          alt: "Bedroom 1",
         },
         {
-          src: "/outside.jpeg",
-          alt: "Front View",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverview-nest/image+9.webp",
+          alt: "Bedroom 2",
         },
         {
-          src: "/outside.jpeg",
-          alt: "Front View",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverview-nest/image+10.webp",
+          alt: "Bedroom 3",
         },
         {
-          src: "/outside.jpeg",
-          alt: "Front View",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverview-nest/image+11.webp",
+          alt: "Dining",
         },
         {
-          src: "/outside.jpeg",
-          alt: "Front View",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverview-nest/image+12.webp",
+          alt: "Living Room",
         },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverview-nest/image+13.webp",
+          alt: "Playing Area",
+        },
+        {
+          src:"https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverview-nest/image+2.webp",
+          alt: "Front View & Garden",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverview-nest/image1.webp",
+          alt: "River View & Sitting Area",
+        }
       ],
     },
     testimonial: {
@@ -650,25 +662,33 @@ export const SlugData: slugDataProps[] = [
       title: "Gallery",
       images: [
         {
-          src: "/outside.jpeg",
-          alt: "Front View",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/4.5-bedroom-villa/image+2.webp",
+          alt: "Outdoors",
         },
         {
-          src: "/outside.jpeg",
-          alt: "Front View",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/4.5-bedroom-villa/image+8.webp",
+          alt: "Swing Area",
         },
         {
-          src: "/outside.jpeg",
-          alt: "Front View",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/4.5-bedroom-villa/image+9.webp",
+          alt: "Bedroom",
         },
         {
-          src: "/outside.jpeg",
-          alt: "Front View",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/4.5-bedroom-villa/image+10.webp",
+          alt: "Dining",
         },
         {
-          src: "/outside.jpeg",
-          alt: "Front View",
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/4.5-bedroom-villa/image+12.webp",
+          alt: "pool",
         },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/4.5-bedroom-villa/image+7.webp",
+          alt: "Bonfire Area",
+        },
+        {
+          src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/4.5-bedroom-villa/image+13.webp",
+          alt: "Balcony & Garden",
+        }
       ],
     },
     testimonial: {

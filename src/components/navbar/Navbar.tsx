@@ -108,7 +108,7 @@ const Navbar: React.FC = () => {
           <div className="lg:hidden block">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`text-primary text-3xl`}
+              className={`text-primary text-3xl ${isOpen ? "rotate-180" : ""} transition duration-300 ease-in-out`}
             >
               {isOpen ? <IoMdClose /> : <CiMenuBurger />}
             </button>

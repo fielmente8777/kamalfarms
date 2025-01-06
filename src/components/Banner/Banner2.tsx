@@ -15,7 +15,7 @@ const Banner2: React.FC<BannerProps> = ({ title, images, desc }) => {
         <div className="grid lg:grid-cols-6 grid-cols-4 w-full items-center justify-center">
           <div className="col-span-4 grid grid-cols-4 items-center justify-center">
             <div className="col-span-1">
-              <div className="relative lg:h-[380px] h-[5.6rem] lg:aspect-square lg:left-24 lg:-top-10  aspect-[4/1.95]">
+              <div className="relative lg:h-[380px] h-[9rem] aspect-square lg:left-14 lg:-top-20">
                 <Image
                   src={images[0]}
                   alt={title}

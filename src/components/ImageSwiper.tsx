@@ -75,7 +75,7 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
                   fill
                 />
                 {item.alt && (
-                  <p className="text-white description1 text-center absolute bottom-2 -translate-x-1/2 left-1/2 bg-black/50 p-2">
+                  <p className="text-white capitalize description1 text-center absolute bottom-2 -translate-x-1/2 left-1/2 bg-black/50 p-2">
                     {item.alt}
                   </p>
                 )}
