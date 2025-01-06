@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.scss";
-import { Navbar } from "@/components";
+import { Call, Navbar } from "@/components";
 import Footer from "@/components/Footer";
+import Whatsapp from "../components/ContactButton/WhatsApp";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -69,6 +70,8 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <Call callNumber="9987519816" />
+        <Whatsapp whatsAppNumber="9987519816" />
       </body>
     </html>
   );
