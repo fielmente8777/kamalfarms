@@ -1,49 +1,26 @@
 import { Container, MainHeading, Section } from "@/components";
 import { ContactBannerDataProps } from "@/data/contact";
 import { OurDetails } from "@/icons/icons";
-import Link from "next/link";
+import Image from "next/image";
 
-const ContactBanner: React.FC<ContactBannerDataProps> = ({ title, data }) => {
+const ContactBanner: React.FC<ContactBannerDataProps> = ({ title, src }) => {
   return (
-    <Section>
-      <div className="flex flex-col items-center justify-center gap-5">
-        <span>
-          <OurDetails />
-        </span>
-        <MainHeading title={title} h1 h2={false} />
-      </div>
-      <div className="bg-primary mt-5">
-        <Container className="bg-primary">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 py-10">
-            {data.map((item, index) => (
-              <div key={index} className="flex flex-col items-center gap-5">
-                <div className="w-full flex items-center justify-center gap-4">
-                  <span>{item.icon}</span>
-                  <MainHeading title={item.title} className="text-white"  />
-                </div>
-                <ul className="flex flex-col gap-2 w-full list-disc list-inside">
-                  {item.link.map((link, linkIndex) => (
-                    <li
-                      key={linkIndex}
-                      className="w-full text-white text-center"
-                    >
-                      <Link
-                        key={linkIndex}
-                        href={link.href}
-                        className="text-white text-center"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+    <Section className="!pt-1">
+      <Container>
+        <div className="relative w-full lg:aspect-[4/1.2] aspect-[4/2.5]">
+          <Image src={src} alt={title} fill className="object-cover object-bottom" />
+          <div className="absolute top-0 left-0 w-full h-full bg-black/50">
+            <div className="flex flex-col items-center justify-center gap-5 w-full h-full">
+              <span>
+                <OurDetails />
+              </span>
+              <MainHeading className="text-white max-md:text-xl" title={title} h1 h2={false} />
+            </div>
           </div>
-        </Container>
-      </div>
+        </div>
+      </Container>
 
-      <div className="absolute lg:w-1/2 w-3/4 bg-bgclr -z-10  h-1/2 top-0 left-0"></div>
+      <div className="absolute lg:w-1/2 w-3/4 bg-bgclr -z-10  lg:h-[74%] h-[43%] top-0 left-0"></div>
     </Section>
   );
 };

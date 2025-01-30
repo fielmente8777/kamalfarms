@@ -1,5 +1,6 @@
 "use client";
-import { MainHeading, SectionWithContainer } from "@/components";
+import { MainHeading } from "@/components";
+import { countries } from "@/data/countryCode";
 import {
   Call,
   DropDownWhite,
@@ -17,7 +18,7 @@ const ContactForm = () => {
   const [userMessage, setUserMessage] = useState("");
   const [userPhone, setUserPhone] = useState("");
   const [userInterestedIn, setUserInterestedIn] = useState("");
-  // const [countryCode, setCountryCode] = useState("+91"); // Default country code
+  const [countryCode, setCountryCode] = useState("+91");
   const [formRes, setFormRes] = useState(false);
   const [emailErrorMessage, setEmailErrorMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -61,7 +62,7 @@ const ContactForm = () => {
           // Domain: "", // Replace with your actual domain value
           email: userEmail,
           Name: userName,
-          Contact: userPhone, // Combine country code and phone number
+          Contact: `${countryCode} ${userPhone}`, // Combine country code and phone number
           Description: userMessage,
         },
         {
@@ -96,35 +97,11 @@ const ContactForm = () => {
       icon: <User />,
       type: "text",
       name: "Name*",
-      placeholder: "Enter your full name*",
+      placeholder: "your full name*",
       required: true,
       value: userName,
       onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
         setUserName(e.target.value);
-      },
-    },
-
-    {
-      tag: "input",
-      icon: <Mail />,
-      type: "email",
-      name: "Email Address*",
-      placeholder: "Enter your email ID*",
-      required: true,
-      value: userEmail,
-      onChange: handleEmailChange,
-    },
-    {
-      tag: "textarea",
-      icon: <Message />,
-      type: "text",
-      name: "Message (if any)",
-      placeholder:
-        "Tell us something about your enquiry. For eg: the no. of guests, tentantive dates, etc.",
-      required: true,
-      value: userMessage,
-      onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
-        setUserMessage(e.target.value);
       },
     },
     {
@@ -134,35 +111,45 @@ const ContactForm = () => {
       placeholder: "Phone Number*",
       required: true,
       content: (
-        <div className="flex gap-2 w-full text-base">
-          {/* <select
-              id="countryCode"
-              name="countryCode"
-              value={countryCode}
-              onChange={(e) => setCountryCode(e.target.value)}
-              className="w-auto bg-transparent rounded-lg text-[#333333] focus:outline-none"
-            >
-              {countries.map((country, index) => (
-                <option
-                  key={index}
-                  value={country.code}
-                  className="text-black bg-gray-100"
-                >
-                  {`${country.code}`}
-                </option>
-              ))}
-            </select> */}
+        <div className="flex gap-2 w-full text-base capitalize bg-white border border-white rounded-sm p-3">
+          <select
+            id="countryCode"
+            name="countryCode"
+            value={countryCode}
+            onChange={(e) => setCountryCode(e.target.value)}
+            className="w-28 bg-white rounded-lg text-textdark focus:outline-none"
+          >
+            {countries.map((country, index) => (
+              <option
+                key={index}
+                value={country.code}
+                className="text-white bg-secondary"
+              >
+                {`${country.code} ${country.name}`}
+              </option>
+            ))}
+          </select>
           <input
             type="number"
             id="Phone Number*"
             name="Phone Number*"
-            placeholder="Enter your phone number*"
+            placeholder="Mobile number*"
             value={userPhone}
             onChange={handlePhoneChange}
-            className="w-full bg-transparent border border-white rounded-sm p-3 placeholder:text-white text-white no-spinner focus:outline-none"
+            className="w-full bg-white placeholder:text-[#A3A3A3] text-white no-spinner focus:outline-none"
           />
         </div>
       ),
+    },
+    {
+      tag: "input",
+      icon: <Mail />,
+      type: "email",
+      name: "Email Address*",
+      placeholder: "email ID*",
+      required: true,
+      value: userEmail,
+      onChange: handleEmailChange,
     },
     {
       tag: "div",
@@ -173,14 +160,14 @@ const ContactForm = () => {
       required: true,
       value: userMessage,
       content: (
-        <div className="relative text-white border border-white flex justify-between rounded-sm bg-transparent overflow-hidden">
+        <div className="relative text-[#A3A3A3] border border-white flex justify-between rounded-sm bg-white overflow-hidden">
           <select
             name="Interested in*"
             id="Interested in*"
             required
             value={userInterestedIn}
             onChange={(e) => setUserInterestedIn(e.target.value)}
-            className="w-full appearance-none px-3 py-3 outline-none bg-secondary rounded-sm"
+            className="w-full appearance-none px-3 py-3 outline-none bg-white rounded-sm"
           >
             <option value="0">Select from below menu</option>
             <option value="1">one</option>
@@ -196,30 +183,40 @@ const ContactForm = () => {
         </div>
       ),
     },
+    {
+      tag: "textarea",
+      icon: <Message />,
+      type: "text",
+      name: "Message (if any)",
+      placeholder:
+        "Tell us something about your enquiry. For eg: the no. of guests, tentantive dates, etc. ",
+      required: true,
+      value: userMessage,
+      onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
+        setUserMessage(e.target.value);
+      },
+    },
   ];
 
   return (
-    <SectionWithContainer containerClassName="bg-secondary lg:!p-10 !py-5">
-      <div className="flex flex-col justify-center gap-5">
-        <MainHeading
-          title="We would love to hear from you"
-          className="text-white"
-        />
+    <>
+      <div className="flex flex-col justify-center gap-5 rounded-md shadow-md w-full h-full bg-bgclr lg:p-10 p-4">
+        <MainHeading title="We would love to hear from you" className="heading4" />
         <form onSubmit={handleSubmit}>
-          <div className="grid lg:grid-cols-3 auto-rows-auto grid-cols-1 gap-4">
+          <div className="flex flex-col gap-4">
             {formData.map((data, index) => (
               <div
                 key={index}
-                className={`flex flex-col gap-2 py-1 bg-transparent ${data.tag === "textarea" ? "row-span-2 max-md:order-last" : " row-span-1"}`}
+                className={`flex flex-col gap-2 py-1  bg-white ${data.tag === "textarea" ? "row-span-2 max-md:order-last" : " row-span-1"}`}
               >
                 <div key={index}>
-                  <label
+                  {/* <label
                     htmlFor={data.name}
                     className="text-white text-base flex items-center gap-4 mb-3"
                   >
                     <span className="">{data.icon}</span>
                     {data.name}
-                  </label>
+                  </label> */}
                   {data.tag === "div"
                     ? data.content
                     : React.createElement(data.tag, {
@@ -234,7 +231,7 @@ const ContactForm = () => {
                         spellCheck: "false",
                         rows: "6",
                         className:
-                          "w-full bg-transparent no-spinner p-3 border border-white resize-none placeholder:text-white focus:outline-none valid:outline-blue-primary invalid:outline-Saffron-primary",
+                          "w-full bg-white no-spinner lg:p-3 p-2 border border-white resize-none placeholder:text-[#A3A3A3] placeholder:capitalize focus:outline-none valid:outline-blue-primary invalid:outline-Saffron-primary",
                       })}
                 </div>
                 {data.name === "phone" && errorMessage && (
@@ -251,7 +248,7 @@ const ContactForm = () => {
           <div className="mt-3">
             <button
               type="submit"
-              className="text-secondary bg-white text-base py-3 px-4 font-semibold hover:bg-primary/80 transition-colors duration-300 ease-in-out"
+              className="text-white w-full bg-primary text-base py-3 px-4 font-semibold hover:bg-primary/80 transition-colors duration-300 ease-in-out"
               disabled={formRes}
             >
               {formRes ? "Submitting..." : "Submit Now"}
@@ -259,7 +256,7 @@ const ContactForm = () => {
           </div>
         </form>
       </div>
-    </SectionWithContainer>
+    </>
   );
 };
 
