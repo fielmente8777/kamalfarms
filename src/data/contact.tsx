@@ -17,7 +17,7 @@ export interface ContactBannerDataProps {
 }
 
 export const contactBannerData: ContactBannerDataProps = {
-  title: "Contact Us for Any Enquiry",
+  title: "Contact us for any enquiry",
   src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/home/contactus_banner.webp",
   data: {
     title: "Contact details",

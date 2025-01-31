@@ -697,7 +697,7 @@ export const SlugData: slugDataProps[] = [
     },
     bookNow: {
       title:
-        "Indulge in Unmatched Luxury with Your 4-Bedroom Pool Villa Getaway!",
+        "Indulge in unmatched luxury with your 4-bedroom pool villa getaway!",
       // subTitle: "Discover Luxery Living",
     },
   },

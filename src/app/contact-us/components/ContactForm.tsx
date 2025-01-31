@@ -201,7 +201,7 @@ const ContactForm = () => {
   return (
     <>
       <div className="flex flex-col justify-center gap-5 rounded-md shadow-md w-full h-full bg-bgclr lg:p-10 p-4">
-        <MainHeading title="We would love to hear from you" className="heading4" />
+        <MainHeading title="We would love to hear from you" className="heading4 " />
         <form onSubmit={handleSubmit}>
           <div className="flex flex-col gap-4">
             {formData.map((data, index) => (

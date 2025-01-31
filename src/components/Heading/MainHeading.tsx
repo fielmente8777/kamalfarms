@@ -21,28 +21,28 @@ const MainHeading: React.FC<HeadingProps> = ({
     <>
       {h1 && (
         <h1
-          className={` ${className} heading3 nexa capitalize text-secondary tracking-wider font-bold"`}
+          className={` ${className} heading3 nexa  text-secondary tracking-wider font-bold"`}
         >
           {title}
         </h1>
       )}
       {h2 && (
         <h2
-          className={` ${className} heading3 nexa capitalize text-secondary tracking-wider font-bold"`}
+          className={` ${className} heading3 nexa  text-secondary tracking-wider font-bold"`}
         >
           {title}
         </h2>
       )}
       {h3 && (
         <h3
-          className={` ${className} heading4 nexa capitalize text-secondary tracking-wider font-bold"`}
+          className={` ${className} heading4 nexa  text-secondary tracking-wider font-bold"`}
         >
           {title}
         </h3>
       )}
       {h4 && (
         <h4
-          className={` ${className} heading4 nexa capitalize text-secondary tracking-wider font-bold"`}
+          className={` ${className} heading4 nexa  text-secondary tracking-wider font-bold"`}
         >
           {title}
         </h4>

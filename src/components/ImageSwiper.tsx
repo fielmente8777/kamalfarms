@@ -10,6 +10,7 @@ import Image from "next/image";
 import { NextButton, PrevButton } from "../icons/icons";
 import MainHeading from "./Heading/MainHeading";
 import LinkComponent from "./Link/LinkComponent";
+import { useState } from "react";
 
 export interface ImageSwiperProps {
   images: {
@@ -39,6 +40,8 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
 
   const swiperButtonNext = `.button-next-${buttonName}`;
   const swiperButtonPrev = `.button-prev-${buttonName}`;
+
+  const [readMore, setReadMore] = useState<number | null>(null);
 
   return (
     <div className="w-full bg-transparent slider relative">
@@ -85,7 +88,7 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
                 )}
               </div>
               {details && (
-                <div className=" bg-white p-7 lg:-mt-10 -mt-20 w-full lg:min-h-[18.5rem] min-h-[31rem] lg:max-w-[44rem] max-w-[16rem] flex  relative z-10 mx-auto">
+                <div className=" bg-white lg:py-6 lg:px-8 p-4 lg:-mt-10 -mt-20 w-full lg:min-h-[18.5rem]  lg:max-w-[44rem] max-w-[16rem] flex  relative z-10 mx-auto">
                   <div className="w-full h-full flex flex-col items-center gap-3">
                     {item.title && (
                       <MainHeading
@@ -97,9 +100,22 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
                     )}
                     {item.description && (
                       <p
-                        className="text-textlight description1 text-base text-center"
-                        dangerouslySetInnerHTML={{ __html: item.description }}
-                      ></p>
+                        className={`text-gray-500 description1 text-base text-center`}
+                      >
+                        <span
+                          className={` text-center ${
+                            readMore !== idx ? "max-md:line-clamp-[8]" : ""
+                          }`}
+                        >
+                          {item.description}
+                        </span>
+                        <span
+                          className="font-semibold lg:hidden underline underline-offset-2 cursor-pointer ml-2 whitespace-nowrap"
+                          onClick={() => setReadMore(idx)}
+                        >
+                          {readMore ? "Read less" : "Read more"}
+                        </span>
+                      </p>
                     )}
                     {/* <Link href={item.link.href} className="text-primary font-medium border-primary/60 border-b-2">{item.link.label}</Link> */}
                     {item.link && (

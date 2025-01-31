@@ -1,8 +1,10 @@
+"use client";
 import Image, { StaticImageData } from "next/image";
 import Section from "./SectionComponents/Section";
 import MainHeading from "./Heading/MainHeading";
 import Paragraph from "./Paragraph/Paragraph";
 import Button from "./Button";
+import { useState } from "react";
 
 interface TwoColGridCardProps {
   title: string;
@@ -29,6 +31,9 @@ const TwoColGridCard: React.FC<TwoColGridCardProps> = ({
     "col-span-3 row-span-1",
     "col-span-3 row-span-1",
   ];
+
+  const [viewMore, setViewMore] = useState(false);
+
   return (
     <Section>
       <div
@@ -51,7 +56,7 @@ const TwoColGridCard: React.FC<TwoColGridCardProps> = ({
           )}
           {arrImages && (
             <div
-              className={`grid grid-cols-6 lg:auto-rows-[19rem] auto-rows-[8rem] gap-1 w-full h-full rounded-sm ${index % 2 === 0 ? "order-1" : "order-2"}`}
+              className={`grid grid-cols-6 lg:auto-rows-[19rem] auto-rows-[10rem] gap-1 w-full h-full rounded-sm ${index % 2 === 0 ? "order-1" : "order-2"}`}
             >
               {arrImages.map((image, index) => (
                 <div
@@ -77,19 +82,45 @@ const TwoColGridCard: React.FC<TwoColGridCardProps> = ({
           {title && <MainHeading title={title} />}
           {subTitle && <MainHeading title={subTitle} />}
           {description && <Paragraph text={description} />}
-          {list && (
-            <ul className="text-gray-600 list-disc pl-4 flex flex-col gap-3">
-              {list.map((item, index) => (
-                <li key={index} className="description1 text-textdark" dangerouslySetInnerHTML={{ __html: item }}>
-                </li>
-              ))}
-            </ul>
-          )}
-          <Button
-            href="/contact-us"
-            label="Contact Us"
-            className="mt-2 w-fit"
-          />
+          <div className="lg:block hidden">
+            {list && (
+              <ul className="text-gray-600 list-disc pl-4 flex flex-col gap-3">
+                {list.map((item, index) => (
+                  <li
+                    key={index}
+                    className="description1 text-textdark"
+                    dangerouslySetInnerHTML={{ __html: item }}
+                  ></li>
+                ))}
+              </ul>
+            )}
+          </div>
+          <div className="lg:hidden">
+            {list && (
+              <ul className="text-gray-600 list-disc pl-4 flex flex-col gap-3">
+                {list
+                  .slice(0, viewMore ? list.length : 3)
+                  .map((item, index) => (
+                    <li
+                      key={index}
+                      className="description1 text-textdark"
+                      dangerouslySetInnerHTML={{ __html: item }}
+                    ></li>
+                  ))}
+              </ul>
+            )}
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-1 justify-between gap-4 w-full items-center">
+            <button
+              className="text-primary lg:hidden underline underline-offset-2 w-fit"
+              onClick={() => setViewMore(!viewMore)}
+            >
+              {viewMore ? "View less" : "View more"}
+            </button>
+            <div className="w-full h-10 flex justify-center max-md:justify-end">
+              <Button href="/contact-us" label="Contact Us" className="w-fit" />
+            </div>
+          </div>
         </div>
       </div>
     </Section>

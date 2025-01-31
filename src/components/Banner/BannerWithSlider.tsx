@@ -36,7 +36,7 @@ const BannerWithSlider: React.FC<BannerProps> = ({ data }) => {
           spaceBetween={10}
           modules={[Navigation, Pagination, EffectFade, Autoplay]}
           loop={true}
-          crossFade={true}
+          // crossFade={true}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
@@ -44,7 +44,7 @@ const BannerWithSlider: React.FC<BannerProps> = ({ data }) => {
           speed="1000"
           effect={'fade'}
           fadeEffect={{
-            crossFade: true,
+            crossfade: true,
           }}
           // navigation={true}
           pagination={{
