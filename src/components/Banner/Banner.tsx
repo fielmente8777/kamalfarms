@@ -35,11 +35,11 @@ const Banner: React.FC<BannerProps> = ({ title, images, desc }) => {
           </div>
         </div>
         <div className="relative w-full max-w-4xl bg-white z-20 h-full lg:-top-24  shadow-xl">
-          <div className="flex flex-col gap-4 h-full w-full lg:p-14 p-2 z-30 bg-white">
+          <div className="flex flex-col gap-4 h-full w-full lg:p-14 p-8 z-30 bg-white">
             <MainHeading title={title} h1 h2={false}/>
             {desc.map((item, index) => (
               <Paragraph
-                className="text-textdark !text-start description1"
+                className="text-textdark !text-start description1 tracking-wide"
                 text={item}
                 key={index}
               />
@@ -47,7 +47,7 @@ const Banner: React.FC<BannerProps> = ({ title, images, desc }) => {
           </div>
         </div>
       </Container>
-      <div className="absolute lg:w-1/2 w-[80%] bg-bgclr -z-10 lg:h-full h-1/2 top-0 left-0"></div>
+      <div className="absolute lg:w-1/2 w-[80%] bg-bgclr -z-10 lg:h-[730px] h-[330px] top-0 left-0"></div>
     </section>
   );
 };

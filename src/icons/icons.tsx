@@ -149,8 +149,8 @@ export const TestimonialOne = () => (
 export const LogoName = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="163.769"
-    height="26.003"
+    width="157.769"
+    height="20.003"
     viewBox="0 0 163.769 26.003"
   >
     <defs>

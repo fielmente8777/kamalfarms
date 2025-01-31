@@ -1,5 +1,5 @@
 import Button from "./Button";
-import MainHeading from "./Heading/MainHeading";
+// import MainHeading from "./Heading/MainHeading";
 import Paragraph from "./Paragraph/Paragraph";
 // import Section from "./SectionComponents/Section";
 import SectionWithContainer from "./SectionComponents/SectionWithContainer";
@@ -16,7 +16,12 @@ const BookNowCard: React.FC<BookNowDataProps> = ({ title, subTitle }) => {
         <div className="col-span-4 w-full h-full flex items-center justify-center">
           <div className="flex flex-col gap-4">
             {subTitle && <Paragraph text={subTitle} className="text-white" />}
-            <MainHeading title={title} className="text-white" />
+            {/* <MainHeading title={title} className="text-white" /> */}
+            <h2
+              className={`heading3 nexa text-white tracking-wider font-bold"`}
+            >
+              {title}
+            </h2>
           </div>
         </div>
         <div className="col-span-4 lg:col-span-1 flex items-center justify-center w-full h-full">

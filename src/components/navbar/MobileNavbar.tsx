@@ -5,6 +5,7 @@ import Link from "next/link";
 import { DropDown } from "@/icons/icons";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+// import { IoMdClose } from "react-icons/io";
 
 export const MobileNavbar = ({
   setIsOpen,
@@ -16,15 +17,16 @@ export const MobileNavbar = ({
   return (
     <header>
       <Container>
-        <nav className="flex flex-col gap-4 w-full h-full">
-          {NavLink.slice(1, NavLink.length - 1).map((link) => (
+        <nav className="flex flex-col gap-4 w-full h-full pt-4">
+          {/* <button onClick={() => setIsOpen(false)} className="self-end text-primary text-3xl mt-2">
+            <IoMdClose />
+          </button> */}
+          {NavLink.map((link) => (
             <div key={link.id} className="group relative text-primary">
               {link.id === 2 || link.id === 3 ? (
                 <span
                   className={`flex items-center gap-2 px-2 py-2 ${
-                    pathname === link.subLinks?.[0]?.link
-                      ? "font-medium"
-                      : ""
+                    pathname === link.subLinks?.[0]?.link ? "font-medium" : ""
                   }`}
                   onClick={() => setIsOpenDropdown(link.id)}
                 >
@@ -71,9 +73,13 @@ export const MobileNavbar = ({
               )}
             </div>
           ))}
-          <button className="bg-primary text-white px-6 py-3 w-fit">
+          <Link
+            href="/contact-us"
+            onClick={() => setIsOpen(false)}
+            className="bg-primary text-white px-6 py-3 w-fit"
+          >
             Contact Us
-          </button>
+          </Link>
         </nav>
       </Container>
     </header>

@@ -36,17 +36,17 @@ const Banner2: React.FC<BannerProps> = ({ title, images, desc }) => {
             </div>
           </div>
           <div className="lg:col-span-2 col-span-4 relative w-full h-full max-md:-ms-2">
-            <div className="lg:absolute shadow-2xl bg-white lg:w-[42rem] w-[20.5rem] max-md:mx-auto lg:top-1/4 lg:right-0 -mt-5 z-10 lg:p-12 p-5 flex items-center justify-center gap-5 flex-col">
+            <div className="lg:absolute shadow-2xl bg-white lg:w-[42rem] w-[20.5rem] max-md:mx-auto lg:top-1/4 lg:right-0 -mt-5 z-10 lg:p-12 p-8 flex items-center justify-center gap-5 flex-col">
               <MainHeading title={title} className="w-full" h1 h2={false} />
 
               {desc.map((item, index) => (
-                <Paragraph key={index} className="text-textdark description1" text={item} />
+                <Paragraph key={index} className="text-textdark description1 tracking-wide" text={item} />
               ))}
             </div>
           </div>
         </div>
       </div>
-      <div className="absolute lg:w-1/2 w-[80%] bg-bgclr -z-10 lg:h-full h-1/2 top-0 left-0"></div>
+      <div className="absolute lg:w-1/2 w-[80%] bg-bgclr -z-10 lg:h-[650px] h-[360px] top-0 left-0"></div>
     </section>
   );
 };

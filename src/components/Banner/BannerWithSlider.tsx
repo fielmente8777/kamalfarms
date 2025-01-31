@@ -87,7 +87,7 @@ const BannerWithSlider: React.FC<BannerProps> = ({ data }) => {
           <div className="banner-pagination flex gap-2 items-center justify-center"></div>
         </div>
       </Container>
-      <div className="absolute lg:w-1/2 w-[80%] bg-bgclr -z-10 lg:h-full h-[35%] top-0 left-0"></div>
+      <div className="absolute lg:w-1/2 w-[80%] bg-bgclr -z-10 lg:h-[780px] h-[300px] top-0 left-0"></div>
     </section>
   );
 };

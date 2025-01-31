@@ -39,7 +39,7 @@ export const sustainabilityPageData = {
     },
   ],
   bookNow: {
-    title: `Embrace Nature’s Bounty: Experience the Purest, Organic Harvest at Kamal Farms`,
+    title: `Embrace nature’s bounty: Experience the purest, organic harvest at Kamal Farms`,
   },
 };
 
@@ -97,7 +97,7 @@ export const eventsAndMorePageData = {
     },
   ],
   bookNow: {
-    title: `Versatile and Picturesque: The Perfect Venue for Every Event. Contact us now to book your unforgettable experience.`,
+    title: `Versatile and picturesque: The perfect venue for every event. Contact us now to book your unforgettable experience.`,
   },
 };
 export const aboutUsPageData = {
@@ -205,6 +205,6 @@ export const aboutUsPageData = {
     ],
   },
   bookNow: {
-    title: `Embrace Nature’s Bounty: Experience the Purest, Organic Harvest at Kamal Farms`,
+    title: `Experience the ultimate getaway at Kamal Farms. Book your escape today and indulge in unparalleled comfort.`,
   },
 };

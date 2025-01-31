@@ -254,7 +254,7 @@ export const SlugData: slugDataProps[] = [
       data: Testimonial,
     },
     bookNow: {
-      title: "Your Dream 5-Bedroom Villa for an Unforgettable Getaway!",
+      title: "Your dream 5-bedroom villa for an unforgettable getaway!",
       subTitle: "Discover Luxery Living",
     },
   },
@@ -424,7 +424,7 @@ export const SlugData: slugDataProps[] = [
       data: Testimonial,
     },
     bookNow: {
-      title: `Your Dream 3-Bedroom Riverside Cottage Awaits!"`,
+      title: `Your dream 3-bedroom riverside cottage awaits!""`,
       subTitle: "Serenity by the Water",
     },
   },
@@ -559,7 +559,7 @@ export const SlugData: slugDataProps[] = [
       data: Testimonial,
     },
     bookNow: {
-      title: "Experience Ultimate Luxury in Your 3-Bedroom Pool Villa Escape!",
+      title: "Experience ultimate luxury in your 3-bedroom pool villa escape!",
       // subTitle: "Discover Luxery Living",
     },
   },

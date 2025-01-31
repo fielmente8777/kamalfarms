@@ -7,7 +7,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-Primary max-w-[1600px] mx-auto w-full ">
+    <footer className="bg-primary w-full ">
       <SectionWithContainer sectionClassName="bg-primary text-white !pt-10 !pb-5">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-16 gap-8">
           {sections.map((section, index) => (

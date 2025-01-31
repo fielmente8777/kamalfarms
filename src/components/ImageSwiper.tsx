@@ -49,6 +49,10 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
         slidesPerView={1.3}
         spaceBetween={10}
         modules={[Autoplay, Navigation, Pagination]}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
         navigation={{
           nextEl: swiperButtonNext,
           prevEl: swiperButtonPrev,
@@ -81,8 +85,8 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
                 )}
               </div>
               {details && (
-                <div className=" bg-white p-7 -mt-10 w-full lg:max-w-[44rem] max-w-[18rem] flex items-center justify-center relative z-10 mx-auto">
-                  <div className="w-full h-full flex flex-col items-center justify-center gap-3">
+                <div className=" bg-white p-7 lg:-mt-10 -mt-20 w-full lg:min-h-[18.5rem] min-h-[31rem] lg:max-w-[44rem] max-w-[16rem] flex  relative z-10 mx-auto">
+                  <div className="w-full h-full flex flex-col items-center gap-3">
                     {item.title && (
                       <MainHeading
                         title={item.title}
@@ -118,7 +122,7 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
           <PrevButton />
         </button>
         <div
-          className={`lg:flex md:flex hidden items-center justify-center gap-1 ${paginationClass}`}
+          className={`${images.length > 5 ? " hidden" : "flex"}  items-center justify-center gap-1 ${paginationClass}`}
         />
         <button
           className={`button-next-${buttonName} p-2 hover:scale-105 border border-transparent rounded-sm hover:shadow-xl shadow-secondary hover:border-secondary active:scale-95`}

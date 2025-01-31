@@ -25,11 +25,11 @@ const Navbar: React.FC = () => {
   }, [isOpen]);
 
   return (
-    <header className="bg-transparent relative top-0 left-0 w-full z-50 pb-2">
+    <header className="bg-transparent relative top-0 left-0 w-full z-50 pb-2 pt-2">
       <Container>
         <nav className="flex justify-between items-center">
           <Link href="/" className="flex flex-col ">
-            <span className="relative lg:h-20 h-14 lg:aspect-[4/2] aspect-[4/1.35]">
+            <span className="relative lg:h-20 h-14 lg:aspect-[4/2] aspect-[4/1.45]">
               <Image
                 src="/Logo.svg"
                 alt="Kamalfarms"
@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
                 className="object-contain"
               />
             </span>
-            <span className="-inset-0.5 lg:h-[2rem] h-7 lg:aspect-[4/2] aspect-[4/1.35] top-0 relative ">
+            <span className="-inset-0.5 lg:h-[2rem] h-5 lg:aspect-[4/2] aspect-[4/1.35] top-0 relative ">
               <span className="absolute top-0 left-0"><LogoName /></span>
             </span>
           </Link>
@@ -47,9 +47,9 @@ const Navbar: React.FC = () => {
                 <span key={link.id} className="group relative text-primary">
                   {link.id === 2 || link.id === 3 ? (
                     <span
-                      className={`flex items-center justify-center gap-2 px-4 cursor-pointer py-2 duration-700 transition ease-linear hover:border-primary border-b-2 border-transparent ${
+                      className={`flex items-center justify-center gap-2 px-4 cursor-pointer py-2 duration-700 transition ease-linear  ${
                         pathname === link.subLinks?.[0]?.link
-                          ? "font-medium"
+                          ? "font-semibold"
                           : ""
                       }`}
                     >
@@ -63,9 +63,9 @@ const Navbar: React.FC = () => {
                   ) : (
                     <Link
                       href={link.link}
-                      className={`flex items-center justify-center gap-2 px-4 py-2 duration-700 transition ease-linear hover:border-primary border-b-2 border-transparent ${
+                      className={`flex items-center justify-center gap-2 px-4 py-2 duration-700 transition ease-linear  ${
                         pathname === link.link
-                          ? "!border-primary font-medium"
+                          ? "font-semibold"
                           : ""
                       }`}
                     >
@@ -83,9 +83,9 @@ const Navbar: React.FC = () => {
                         <li key={subLink.id}>
                           <Link
                             href={subLink.link}
-                            className={`block px-4 py-2 duration-300 transition ease-in-out hover:border-primary border-b-2 border-transparent  ${
+                            className={`block px-4 py-2 duration-300 transition ease-in-out  ${
                               pathname === subLink.link
-                                ? "!border-primary font-medium"
+                                ? " font-semibold"
                                 : ""
                             }`}
                           >
@@ -108,13 +108,13 @@ const Navbar: React.FC = () => {
           <div className="lg:hidden block">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`text-primary text-3xl ${isOpen ? "rotate-180" : ""} transition duration-300 ease-in-out`}
+              className={`text-primary text-3xl ${isOpen ? "rotate-180" : ""} max-md:relative z-50 transition duration-300 ease-in-out`}
             >
               {isOpen ? <IoMdClose /> : <CiMenuBurger />}
             </button>
 
             <div
-              className={`fixed top-24 left-0 w-full h-full bg-white z-50 transform transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+              className={`fixed top-0 left-0 w-full h-full bg-white z-30 transform transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"}`}
             >
               <MobileNavbar setIsOpen={setIsOpen} />
             </div>

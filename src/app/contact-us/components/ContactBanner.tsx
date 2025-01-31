@@ -20,7 +20,7 @@ const ContactBanner: React.FC<ContactBannerDataProps> = ({ title, src }) => {
         </div>
       </Container>
 
-      <div className="absolute lg:w-1/2 w-3/4 bg-bgclr -z-10  lg:h-[74%] h-[43%] top-0 left-0"></div>
+      <div className="absolute lg:w-1/2 w-3/4 bg-bgclr -z-10  lg:h-[540px] h-[298px] top-0 left-0"></div>
     </Section>
   );
 };
