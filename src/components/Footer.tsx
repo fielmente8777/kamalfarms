@@ -26,8 +26,26 @@ const Footer = () => {
               Follow Us
             </h3>
             <ul className={`flex gap-4`}>
-              <Facebook />
-              <Insta />
+              <li className="">
+                <Link
+                  href="https://www.facebook.com/kamalfarmskarjat/"
+                  target="_blank"
+                  className="text-white hover:text-white/80 transition-colors duration-300 ease-in-out"
+                >
+                  <Facebook />
+                  <span className="sr-only"> Facebook</span>
+                </Link>
+              </li>
+              <li className="">
+                <Link
+                  href="https://www.instagram.com/kamalfarms/?igshid=19xtjb9xbeb1p"
+                  target="_blank"
+                  className="text-white hover:text-white/80 transition-colors duration-300 ease-in-out"
+                >
+                  <span className="sr-only"> Instagram</span>
+                  <Insta />
+                </Link>
+              </li>
             </ul>
             <span className=" flex gap-3">
               <CopyRight /> Kamal Farms, Karjat | {currentYear}
@@ -36,7 +54,10 @@ const Footer = () => {
         </div>
         <hr className="flex w-full mt-5" />
         <div className="flex justify-center text-base gap-1 pt-5">
-          Design and developed by{" "}<Link href="https://eazotel.com/" target="_blank" >{" Eazotel"}</Link>
+          Design and developed by{" "}
+          <Link href="https://eazotel.com/" target="_blank">
+            {" Eazotel"}
+          </Link>
         </div>
       </SectionWithContainer>
     </footer>

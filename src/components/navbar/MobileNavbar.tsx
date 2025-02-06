@@ -21,12 +21,12 @@ export const MobileNavbar = ({
           {/* <button onClick={() => setIsOpen(false)} className="self-end text-primary text-3xl mt-2">
             <IoMdClose />
           </button> */}
-          {NavLink.map((link) => (
+          {NavLink.slice(0, 6).map((link) => (
             <div key={link.id} className="group relative text-primary">
               {link.id === 2 || link.id === 3 ? (
                 <span
                   className={`flex items-center gap-2 px-2 py-2 ${
-                    pathname === link.subLinks?.[0]?.link ? "font-medium" : ""
+                    pathname === link.subLinks?.[0]?.link ? "font-semibold" : ""
                   }`}
                   onClick={() => setIsOpenDropdown(link.id)}
                 >
@@ -44,7 +44,7 @@ export const MobileNavbar = ({
                   href={link.link}
                   className={`flex items-center gap-2 px-2 py-2 ${
                     pathname === link.link
-                      ? "border-primary border-l-2 font-medium"
+                      ? "font-semibold"
                       : ""
                   }`}
                   onClick={() => setIsOpen(false)}
@@ -63,7 +63,7 @@ export const MobileNavbar = ({
                     <li key={subLink.id} onClick={() => setIsOpen(false)}>
                       <Link
                         href={subLink.link}
-                        className={`block px-4 py-2 ${pathname === subLink.link ? "font-medium border-primary border-l-2" : ""}`}
+                        className={`block px-4 py-2 ${pathname === subLink.link ? "font-semibold" : ""}`}
                       >
                         {subLink.name}
                       </Link>

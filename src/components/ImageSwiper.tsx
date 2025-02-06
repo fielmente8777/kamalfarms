@@ -43,6 +43,14 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
 
   const [readMore, setReadMore] = useState<number | null>(null);
 
+  const handleReadMore = (index: number) => {
+    if (readMore === index) {
+      setReadMore(null);
+    } else {
+      setReadMore(index);
+    }
+  };
+
   return (
     <div className="w-full bg-transparent slider relative">
       <Swiper
@@ -82,7 +90,7 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
                   fill
                 />
                 {item.alt && (
-                  <p className="text-white capitalize description1 text-center absolute bottom-2 -translate-x-1/2 left-1/2 bg-black/50 p-2">
+                  <p className="text-white capitalize lg:description1 text-sm w-max text-center absolute bottom-2 -translate-x-1/2 left-1/2 bg-black/50 p-2">
                     {item.alt}
                   </p>
                 )}
@@ -111,9 +119,9 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
                         </span>
                         <span
                           className="font-semibold lg:hidden underline underline-offset-2 cursor-pointer ml-2 whitespace-nowrap"
-                          onClick={() => setReadMore(idx)}
+                          onClick={() => handleReadMore(idx)}
                         >
-                          {readMore ? "Read less" : "Read more"}
+                          {readMore === idx ? "Read less" : "Read more"}
                         </span>
                       </p>
                     )}

@@ -104,28 +104,28 @@ export const SlugData: slugDataProps[] = [
       data: [
         {
           name: "Bedroom 1",
-          type1: "1 King Bedroom",
-          type2: "1 Queen Bedroom",
+          type1: "1 King Bed",
+          type2: "1 Queen Bed",
         },
         {
           name: "Bedroom 2",
-          type1: "1 King Bedroom",
-          type2: "1 Queen Bedroom",
+          type1: "1 King Bed",
+          type2: "1 Queen Bed",
         },
         {
           name: "Bedroom 3",
-          type1: "1 King Bedroom",
-          type2: "1 Queen Bedroom",
+          type1: "1 King Bed",
+          type2: "1 Queen Bed",
         },
         {
           name: "Bedroom 4",
-          type1: "1 King Bedroom",
-          type2: "1 Queen Bedroom",
+          type1: "1 King Bed",
+          type2: "1 Queen Bed",
         },
         {
           name: "Bedroom 5",
-          type1: "1 King Bedroom",
-          type2: "1 Queen Bedroom",
+          type1: "1 King Bed",
+          type2: "1 Queen Bed",
         },
         {
           name: "Loft",
@@ -255,7 +255,7 @@ export const SlugData: slugDataProps[] = [
     },
     bookNow: {
       title: "Your dream 5-bedroom villa for an unforgettable getaway!",
-      subTitle: "Discover Luxery Living",
+      subTitle: "Discover Luxury Living",
     },
   },
   {
@@ -297,18 +297,18 @@ export const SlugData: slugDataProps[] = [
       data: [
         {
           name: "Bedroom 1",
-          type1: "1 King Bedroom",
-          type2: "1 Queen Bedroom",
+          type1: "1 King Bed",
+          type2: "1 Queen Bed",
         },
         {
           name: "Bedroom 2",
-          type1: "1 King Bedroom",
-          type2: "1 Queen Bedroom",
+          type1: "1 King Bed",
+          type2: "1 Queen Bed",
         },
         {
           name: "Bedroom 3",
-          type1: "1 King Bedroom",
-          type2: "1 Queen Bedroom",
+          type1: "1 King Bed",
+          type2: "1 Queen Bed",
         },
         {
           name: "Living Room",
@@ -424,8 +424,8 @@ export const SlugData: slugDataProps[] = [
       data: Testimonial,
     },
     bookNow: {
-      title: `Your dream 3-bedroom riverside cottage awaits!""`,
-      subTitle: "Serenity by the Water",
+      title: `Your dream 3-bedroom riverside cottage awaits!`,
+      subTitle: "Serenity by water",
     },
   },
   {
@@ -438,7 +438,7 @@ export const SlugData: slugDataProps[] = [
       ],
       title: "3 Bedroom Riverview Nest",
       desc: [
-        " A gorgeous 3-bedroom villa with a shared common pool sits on the shores of River Pej in Karjat. Quality time with your loved ones, river front lunch at the shared common dining, a game room, refreshing pool splash, fruit plantation walks, bonfire nights, etc., to make your stay extra special.",
+        "A gorgeous 3-bedroom villa with a shared common pool sits on the shores of River Pej in Karjat. Quality time with your loved ones, river front lunch at the shared common dining, a game room, refreshing pool splash, fruit plantation walks, bonfire nights, etc., to make your stay extra special.",
         "Escape the mundane and experience a peaceful retreat at SaffronStays Riverscape Nest, an enchanting 3-bedroom villa with a shared common pool, just a 2-hour drive from Mumbai. Nestled amidst the verdant greens of Karjat, its breathtaking location on the banks of Pej River makes it one of the best villas near Mumbai.",
       ],
     },

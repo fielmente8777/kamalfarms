@@ -97,7 +97,7 @@ const ContactForm = () => {
       icon: <User />,
       type: "text",
       name: "Name*",
-      placeholder: "your full name*",
+      placeholder: "Your full name*",
       required: true,
       value: userName,
       onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -111,7 +111,7 @@ const ContactForm = () => {
       placeholder: "Phone Number*",
       required: true,
       content: (
-        <div className="flex gap-2 w-full text-base capitalize bg-white border border-white rounded-sm p-3">
+        <div className="flex gap-2 w-full text-base  bg-white border border-white rounded-sm p-3">
           <select
             id="countryCode"
             name="countryCode"
@@ -136,7 +136,7 @@ const ContactForm = () => {
             placeholder="Mobile number*"
             value={userPhone}
             onChange={handlePhoneChange}
-            className="w-full bg-white placeholder:text-[#A3A3A3] text-white no-spinner focus:outline-none"
+            className="w-full bg-white placeholder:text-[#A3A3A3] text-textdark no-spinner focus:outline-none"
           />
         </div>
       ),
@@ -146,7 +146,7 @@ const ContactForm = () => {
       icon: <Mail />,
       type: "email",
       name: "Email Address*",
-      placeholder: "email ID*",
+      placeholder: "Email ID*",
       required: true,
       value: userEmail,
       onChange: handleEmailChange,
@@ -231,7 +231,7 @@ const ContactForm = () => {
                         spellCheck: "false",
                         rows: "6",
                         className:
-                          "w-full bg-white no-spinner lg:p-3 p-2 border border-white resize-none placeholder:text-[#A3A3A3] placeholder:capitalize focus:outline-none valid:outline-blue-primary invalid:outline-Saffron-primary",
+                          "w-full bg-white no-spinner lg:p-3 p-2 border border-white resize-none placeholder:text-[#A3A3A3] placeholder: focus:outline-none valid:outline-blue-primary invalid:outline-Saffron-primary",
                       })}
                 </div>
                 {data.name === "phone" && errorMessage && (

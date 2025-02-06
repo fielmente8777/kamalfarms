@@ -53,7 +53,7 @@ const BannerWithSlider: React.FC<BannerProps> = ({ data }) => {
           }}
         >
           {(item: BannerItem) => (
-            <div className="grid lg:grid-cols-3 grid-cols-1">
+            <div className="grid lg:grid-cols-3 grid-cols-1 ">
               <div className="relative w-full aspect-[4/3] col-span-2">
                 <Image
                   src={item.image}
@@ -62,10 +62,10 @@ const BannerWithSlider: React.FC<BannerProps> = ({ data }) => {
                   className="object-cover"
                 />
               </div>
-              <div className="flex flex-col justify-center max-md:mt-2 items-center lg:ps-16 lg:pe-2 col-span-1 bg-white">
-                <MainHeading title={item.title} h1 h2={false} />
+              <div className="flex flex-col justify-center max-md:mt-2 items-center lg:ps-16 lg:pe-2 col-span-1 bg-white max-md:h-[18rem]">
+                <MainHeading title={item.title} h1 h2={false} className="tracking-wide" />
                 <Paragraph
-                  className="mt-4 description1"
+                  className="mt-4 tracking-wide description1"
                   text={item.description}
                 />
                 <div className="lg:mt-12 my-5 flex gap-4 justify-between items-center w-full lg:justify-between">

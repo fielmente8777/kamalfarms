@@ -50,7 +50,7 @@ export const bannerData = {
 
 export const slider1 = {
   title: "Our Properties",
-  description: `"Discover Our Unique Properties in Karjat and Panchgani – Your Gateway to Tranquil Retreats and Scenic Adventures."`,
+  description: `Discover Our Unique Properties in Karjat and Panchgani – Your Gateway to Tranquil Retreats and Scenic Adventures.`,
   images: [
     {
       src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/home/asset+6.webp",
