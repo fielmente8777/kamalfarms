@@ -68,6 +68,7 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <Navbar />
+        <div className="lg:mt-[6.5rem] mt-[5rem]"></div>
         {children}
         <Footer />
         <Call callNumber="9987519816" />

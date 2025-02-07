@@ -48,12 +48,17 @@
   scroll-behavior: smooth;
 }
 
+// body {
+//   font-size: clamp(1.4rem, calc(1.25rem + 0.3vw), 1.5rem);
+//   line-height: clamp(2.1rem, calc(1.5rem + 0.75vw), 2.5rem);
+// }
+
 ::-webkit-scrollbar {
   width: 0.48rem;
 }
 ::-webkit-scrollbar-button {
   background-color: #18685c;
-  border-radius: 0.7rem  ;
+  border-radius: 0.7rem;
   border: 1px solid #ffefe3;
 }
 ::-webkit-scrollbar-corner {
@@ -206,7 +211,6 @@
   .max-width {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 0.4rem;
     width: 100%;
 
     @media screen and (max-width: 640px) {
@@ -255,7 +259,8 @@
 //   }
 // }
 .banner {
-  .banner-pagination,.banner-pagination1 {
+  .banner-pagination,
+  .banner-pagination1 {
     .swiper-pagination-bullet {
       background-color: #c17362;
       width: 0.8rem;
@@ -272,3 +277,10 @@
   }
 }
 
+.space {
+  margin-inline: 1.5rem;
+  @media screen and (max-width: 640px) {
+    display: block;
+    margin-top: 0.5rem;
+  }
+}

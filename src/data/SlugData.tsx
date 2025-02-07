@@ -69,7 +69,7 @@ export const SlugData: slugDataProps[] = [
         "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/5-bedroom-riverview-villa/asset+2.webp",
         "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/5-bedroom-riverview-villa/asset+3.webp",
       ],
-      title: "5 bedroom Riverview Villa",
+      title: "5BR Riverview Villa",
       desc: [
         "A space is created by the people who occupy it. The riverview villa generously lends itself to the guests for a memorable stay. This two storeyed stately looking villa consists of 4 bedrooms and a spacious family room. The living room on the ground floor is quite roomy along with a gaming room, a kitchen, a dining area and 2 bedrooms.",
         "The panoramic view of the scenic valley is no stranger to the bedrooms and the balcony on the top floor. The fifth bedroom on the top floor is made from glass facades on 3 sides. It gives a 180° view of the trees outside whereas the terrace opens up the world to you. Fill the villa up with iconic anecdotes, laughter and games.",
@@ -266,7 +266,7 @@ export const SlugData: slugDataProps[] = [
         "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverside-cottage/asset+2.webp",
         "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverside-cottage/asset+3.webp",
       ],
-      title: "3 Bedroom Riverside Cottage",
+      title: "3BR Riverside Cottage",
       desc: [
         "We believe in cherishing every moment as it arrives. This fast paced city life often disconnects us with our present. Sometimes all we need is to log ourselves out of the daily hustle and slow down a little. The Riverside cottage is a homey space for such offline intimate gatherings. Let the ambience dazzle you.",
         "The cottage consists of a living room and 3 cozy rooms. The living room window opens up to the gently flowing Pej river. Savour a cup of tea on the porch or finish that unfinished book. The riverside cottage will assure a relaxing weekend filled with warmth and laughter just like those good ol' days we often miss.",
@@ -436,7 +436,7 @@ export const SlugData: slugDataProps[] = [
         "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverview-nest/image1.webp",
         "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverview-nest/image+2.webp",
       ],
-      title: "3 Bedroom Riverview Nest",
+      title: "3BR Riverview Nest",
       desc: [
         "A gorgeous 3-bedroom villa with a shared common pool sits on the shores of River Pej in Karjat. Quality time with your loved ones, river front lunch at the shared common dining, a game room, refreshing pool splash, fruit plantation walks, bonfire nights, etc., to make your stay extra special.",
         "Escape the mundane and experience a peaceful retreat at SaffronStays Riverscape Nest, an enchanting 3-bedroom villa with a shared common pool, just a 2-hour drive from Mumbai. Nestled amidst the verdant greens of Karjat, its breathtaking location on the banks of Pej River makes it one of the best villas near Mumbai.",

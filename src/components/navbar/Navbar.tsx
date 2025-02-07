@@ -12,6 +12,7 @@ import { MobileNavbar } from "./MobileNavbar";
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const [color, setColor] = useState(false);
 
   useEffect(() => {
     if (isOpen) {
@@ -24,12 +25,29 @@ const Navbar: React.FC = () => {
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setColor(true);
+      } else {
+        setColor(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [color]);
+
   return (
-    <header className="bg-transparent relative top-0 left-0 w-full z-50 pb-2 pt-2">
+    <header
+      className={`bg-transparent fixed top-0 left-0 w-full h-max z-50 ${color ? "bg-white/90" : "bg-transparent"} `}
+    >
       <Container>
         <nav className="flex justify-between items-center">
           <Link href="/" className="flex flex-col ">
-            <span className="relative lg:h-20 h-14 lg:aspect-[4/2] aspect-[4/1.45]">
+            <span className="relative lg:h-[4.2rem] h-14 lg:aspect-[4/2] aspect-[4/1.45]">
               <Image
                 src="/Logo.svg"
                 alt="Kamalfarms"
@@ -37,9 +55,11 @@ const Navbar: React.FC = () => {
                 className="object-contain"
               />
             </span>
-            <span className="-inset-0.5 lg:h-[2rem] h-5 lg:aspect-[4/2] aspect-[4/1.35] top-0 relative ">
-              <span className="absolute top-0 left-0"><LogoName /></span>
+            {/* <span className="-inset-0.5 lg:h-[1rem] h-5 lg:aspect-[4/1] aspect-[4/1.35] top-0 relative "> */}
+            <span className={color ? "opacity-0" : "opacity-100"}>
+              <LogoName />
             </span>
+            {/* </span> */}
           </Link>
           <div className="lg:flex hidden items-center gap-4 text-base">
             <div className="flex items-center gap-4 text-base relative">
@@ -64,9 +84,7 @@ const Navbar: React.FC = () => {
                     <Link
                       href={link.link}
                       className={`flex items-center justify-center gap-2 px-4 py-2 duration-700 transition ease-linear  ${
-                        pathname === link.link
-                          ? "font-semibold"
-                          : ""
+                        pathname === link.link ? "font-semibold" : ""
                       }`}
                     >
                       {link.name}{" "}
@@ -84,9 +102,7 @@ const Navbar: React.FC = () => {
                           <Link
                             href={subLink.link}
                             className={`block px-4 py-2 duration-300 transition ease-in-out  ${
-                              pathname === subLink.link
-                                ? " font-semibold"
-                                : ""
+                              pathname === subLink.link ? " font-semibold" : ""
                             }`}
                           >
                             {subLink.name}
@@ -100,7 +116,7 @@ const Navbar: React.FC = () => {
             </div>
             <Link
               href="/contact-us"
-              className="bg-primary text-white px-6 py-5"
+              className="bg-primary text-white px-6 py-10"
             >
               Contact Us
             </Link>

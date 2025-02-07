@@ -5,7 +5,7 @@ interface Paragraph {
 }
 const Paragraph: React.FC<Paragraph> = ({ text, className = "" }) => {
     return (
-        <p className={`${className}  text-textdark`}>{text}</p>
+        <p className={`${className}  text-textdark`} dangerouslySetInnerHTML={{ __html: text}}></p>
     )
 }
 

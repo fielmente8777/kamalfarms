@@ -18,6 +18,7 @@ export interface ImageSwiperProps {
     title?: string;
     description?: string;
     alt?: string;
+    location: string;
     link?: {
       href: string;
       label: string;
@@ -125,6 +126,7 @@ const ImageSwiper: React.FC<ImageSwiperProps> = ({
                         </span>
                       </p>
                     )}
+                    <h4 className="text-base text-textdark font-bold">Location: {item.location}</h4>
                     {/* <Link href={item.link.href} className="text-primary font-medium border-primary/60 border-b-2">{item.link.label}</Link> */}
                     {item.link && (
                       <LinkComponent

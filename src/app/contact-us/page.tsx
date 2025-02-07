@@ -1,7 +1,9 @@
 import { contactBannerData } from "@/data/contact";
-import ContactBanner from "./components/ContactBanner";
+// import ContactBanner from "./components/ContactBanner";
 import { Metadata } from "next";
 import ContactDetails from "./components/ContactDetails";
+import { Banner } from "@/components";
+import ContactForm from "./components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact | Kamal Farms Karjat",
@@ -46,8 +48,10 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <main>
-      <ContactBanner {...contactBannerData} />
-      <ContactDetails {...contactBannerData.data}/>
+      {/* <ContactBanner {...contactBannerData} /> */}
+      <Banner {...contactBannerData.data} />
+      <ContactForm />
+      <ContactDetails addresses={contactBannerData.addresses} />
     </main>
   );
 };

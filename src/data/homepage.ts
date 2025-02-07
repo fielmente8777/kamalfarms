@@ -54,9 +54,10 @@ export const slider1 = {
   images: [
     {
       src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/home/asset+6.webp",
-      title: "3 Bedroom Riverside Cottage",
+      title: "3BR Riverside Cottage",
       description:
         "Imagine waking up to the sound of a river in the comfort of a cozy cottage. This homely abode expands across 2000 sq.ft., in Karjat and accommodates up to 8 guests. The Riverside cottage is perfect for intimate gatherings. Surrounded by lush greenery, it offers a serene escape, ideal for relaxing and reconnecting with nature.",
+      location: "Karjat",
       link: {
         href: "/3-bedroom-riverside-cottage",
         label: "Know More",
@@ -64,9 +65,10 @@ export const slider1 = {
     },
     {
       src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/4.5-bedroom-villa/image+2.webp",
-      title: "4.5 Bedroom Villa",
+      title: "4.5BR Villa",
       description:
-        "SaffronStays Breeze Over The Valley is an exclusive 4.5-bedroom vegetarian-friendly villa in Panchgani, just 5 minutes from Mapro Garden. Surrounded by lush lawns, it offers indoor and outdoor games, a bonfire, and panoramic views. With modern amenities and decorated rooms, the villa is a 2.5-hour drive from Pune and easily accessible from Mumbai.",
+        "SaffronStays Breeze Over The Valley is an exclusive 4.5-bedroom vegetarian-friendly villa in Panchgani, just 5 minutes from Mapro Garden. Surrounded by lush lawns, it offers indoor and outdoor games, a bonfire, and panoramic views. The villa is a 2.5-hour drive from Pune and easily accessible from Mumbai.",
+      location: "Panchgani",
       link: {
         href: "/4.5-bedroom-villa",
         label: "Know More",
@@ -74,9 +76,10 @@ export const slider1 = {
     },
     {
       src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/home/asset+5.webp",
-      title: "5 Bedroom Riverview Villa",
+      title: "5BR Riverview Villa",
       description:
-        "Spread across 6000 sq.ft, in Karjat, the riverview villa offers 5 bedrooms which can lend itself to 32 guests. Every bedroom offers space and privacy. Spending your holiday at the riverview villa is all you need to unwind and relax with family and friends. With stunning views of the river, the villa creates a peaceful, serene atmosphere perfect for a memorable getaway.",
+        "Spread across 6000 sq.ft, in Karjat, the riverview villa offers 5 bedrooms which can lend itself to 32 guests. Every bedroom offers space and privacy. Spending your holiday at the riverview villa is all you need to unwind and relax with family and friends. It offers stunning river views and a peaceful getaway.",
+      location: "Karjat",
       link: {
         href: "/5-bedroom-riverview-villa",
         label: "Know More",
@@ -84,9 +87,10 @@ export const slider1 = {
     },
     {
       src: "/outside.jpeg",
-      title: "3 Bedroom Riverview Nest",
+      title: "3BR Riverview Nest",
       description:
         "The Riverview Nest, nestled in 1,600 sq. ft. in Karjat, offers 3 spacious bedrooms and can accommodate up to 14 guests. It’s the perfect retreat for families or small groups, offering privacy and comfort for a peaceful getaway with loved ones. With beautiful river views and surrounded by nature, it’s an ideal spot to relax and rejuvenate.",
+      location: "Karjat",
       link: {
         href: "/3-bedroom-riverview-nest",
         label: "Know More",
