@@ -13,6 +13,7 @@ interface SliderComponentImageProps {
     title?: string;
     alt?: string;
     description?: string;
+    location?: string;
     link?: {
       href: string;
       label: string;

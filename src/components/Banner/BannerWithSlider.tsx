@@ -27,6 +27,7 @@ interface BannerProps {
 }
 
 const BannerWithSlider: React.FC<BannerProps> = ({ data }) => {
+
   return (
     <section className="max-w-[1600px] mx-auto pt-2 pb-10">
       <Container className="banner relative">
@@ -42,7 +43,7 @@ const BannerWithSlider: React.FC<BannerProps> = ({ data }) => {
             disableOnInteraction: false,
           }}
           speed="1000"
-          effect={'fade'}
+          effect={"fade"}
           fadeEffect={{
             crossfade: true,
           }}
@@ -63,20 +64,26 @@ const BannerWithSlider: React.FC<BannerProps> = ({ data }) => {
                 />
               </div>
               <div className="flex flex-col justify-center max-md:mt-2 items-center lg:ps-16 lg:pe-2 col-span-1 bg-white max-md:h-[18rem]">
-                <MainHeading title={item.title} h1 h2={false} className="tracking-wide" />
+                <MainHeading
+                  title={item.title}
+                  h1
+                  h2={false}
+                  className="tracking-wide"
+                />
                 <Paragraph
                   className="mt-4 tracking-wide description1"
                   text={item.description}
                 />
                 <div className="lg:mt-12 my-5 flex gap-4 justify-between items-center w-full lg:justify-between">
                   <LinkComponent
-                    href={item.pageLink.href || "/"}
-                    text={item.pageLink.label}
+                  href={item.pageLink.href || "/"}
+                  text={item.pageLink.label}
+                  newTab={data.indexOf(item) === 1}
                   />
                   <Button
-                    href={item.btnLink.href || "/"}
-                    label={item.btnLink.label}
-                    className="capitalize"
+                  href={item.btnLink.href || "/"}
+                  label={item.btnLink.label}
+                  className="capitalize"
                   />
                 </div>
               </div>

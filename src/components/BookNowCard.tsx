@@ -1,3 +1,4 @@
+import { BookingLink } from "@/data/navbar";
 import Button from "./Button";
 // import MainHeading from "./Heading/MainHeading";
 import Paragraph from "./Paragraph/Paragraph";
@@ -26,7 +27,7 @@ const BookNowCard: React.FC<BookNowDataProps> = ({ title, subTitle }) => {
         </div>
         <div className="col-span-4 lg:col-span-1 flex items-center justify-center w-full h-full">
           <Button
-            href="/book-now"
+            href={BookingLink}
             label="Book Now"
             className="!bg-white !text-secondary !py-4 !px-8 !rounded-sm !font-semibold hover:!bg-white/80 transition-colors duration-300 ease-in-out"
           />

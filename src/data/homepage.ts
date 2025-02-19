@@ -1,3 +1,5 @@
+import { BookingLink } from "./navbar";
+
 export const bannerData = {
   data: [
     {
@@ -7,11 +9,11 @@ export const bannerData = {
       image:
         "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/home/asset+2.webp",
       pageLink: {
-        href: "/",
+        href: "/5-bedroom-riverview-villa/",
         label: "View 5 Bhk Luxury Villa",
       },
       btnLink: {
-        href: "/properties",
+        href: BookingLink,
         label: "Book Now",
       },
     },
@@ -22,11 +24,11 @@ export const bannerData = {
       image:
         "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/home/asset+3.webp",
       pageLink: {
-        href: "/",
+        href: "https://maps.app.goo.gl/2xzvB13Lvhuvstag7",
         label: "View Location",
       },
       btnLink: {
-        href: "/properties",
+        href: BookingLink,
         label: "Book Now",
       },
     },
@@ -37,11 +39,11 @@ export const bannerData = {
       image:
         "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/home/asset+4.webp",
       pageLink: {
-        href: "/",
+        href: "/events-and-more/",
         label: "Know More",
       },
       btnLink: {
-        href: "/properties",
+        href: BookingLink,
         label: "Book Now",
       },
     },

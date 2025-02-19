@@ -18,7 +18,7 @@ export interface ImageSwiperProps {
     title?: string;
     description?: string;
     alt?: string;
-    location: string;
+    location?: string;
     link?: {
       href: string;
       label: string;

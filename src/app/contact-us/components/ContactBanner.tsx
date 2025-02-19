@@ -1,8 +1,11 @@
 import { Container, MainHeading, Section } from "@/components";
-import { ContactBannerDataProps } from "@/data/contact";
 import { OurDetails } from "@/icons/icons";
 import Image from "next/image";
 
+interface ContactBannerDataProps {
+  title: string;
+  src: string;
+}
 const ContactBanner: React.FC<ContactBannerDataProps> = ({ title, src }) => {
   return (
     <Section className="!pt-1">

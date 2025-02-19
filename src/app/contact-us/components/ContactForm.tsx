@@ -57,16 +57,17 @@ const ContactForm = () => {
       const { data } = await axios.post(
         "https://nexon.eazotel.com/eazotel/addcontacts",
         {
-          Domain: "abhijeet",
-          // Domain: "", // Replace with your actual domain value
+          // Domain: "sumit",
+          // Domain: "abhijeet",
+          Domain: "kamalfarms", // Replace with your actual domain value
           email: userEmail,
           Name: userName,
           Contact: userPhone, // Combine country code and phone number
-          Description: userMessage,
+          Description: `Interested in: ${userInterestedIn}\nMessage: ${userMessage}`,
         },
         {
           headers: {
-            "Content-Type": "application/json",
+        "Content-Type": "application/json",
           },
         }
       );
@@ -181,9 +182,33 @@ const ContactForm = () => {
             onChange={(e) => setUserInterestedIn(e.target.value)}
             className="w-full appearance-none px-3 py-3 outline-none bg-secondary  rounded-sm"
           >
-            <option value="0" className="hover:bg-primary">-Select-</option>
-            <option value="1" className="hover:bg-primary">one</option>
-            <option value="2" className="hover:bg-primary">two</option>
+            <option value="-Select-" className="hover:bg-primary">
+              -Select-
+            </option>
+            <option
+              value="5 Bedroom Riverview Villa"
+              className="hover:bg-primary"
+            >
+              5 Bedroom Riverview Villa
+            </option>
+            <option
+              value="3 Bedroom Riverside Cottage"
+              className="hover:bg-primary"
+            >
+              3 Bedroom Riverside Cottage
+            </option>
+            <option
+              value="3 Bedroom Riverview Nest"
+              className="hover:bg-primary"
+            >
+              3 Bedroom Riverview Nest
+            </option>
+            <option value="4.5 Bedroom Villa" className="hover:bg-primary">
+              4.5 Bedroom Villa
+            </option>
+            <option value="Something else" className="hover:bg-primary">
+              Something else
+            </option>
           </select>
 
           <div
@@ -236,7 +261,7 @@ const ContactForm = () => {
                         spellCheck: "false",
                         rows: "6",
                         className:
-                          "w-full bg-transparent no-spinner p-3 border border-white resize-none placeholder:text-[#E9CEC8] focus:outline-none valid:outline-blue-primary invalid:outline-Saffron-primary",
+                          "w-full bg-transparent no-spinner p-3 border border-white resize-none placeholder:text-[#E9CEC8] text-white focus:outline-none valid:outline-blue-primary invalid:outline-Saffron-primary",
                       })}
                 </div>
                 {data.name === "phone" && errorMessage && (
@@ -253,7 +278,7 @@ const ContactForm = () => {
           <div className="mt-3">
             <button
               type="submit"
-              className="text-secondary bg-white text-base py-3 px-4 font-semibold hover:bg-primary/80 transition-colors duration-300 ease-in-out"
+              className="text-secondary bg-white text-base py-3 px-4 font-semibold hover:bg-bgclr transition-colors duration-300 ease-in-out"
               disabled={formRes}
             >
               {formRes ? "Submitting..." : "Submit Now"}

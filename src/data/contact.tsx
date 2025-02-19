@@ -21,7 +21,7 @@ export const contactBannerData = {
     },
     {
       id: 2,
-      src: "",
+      src: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3435.3285282933657!2d73.75629347517737!3d17.924610083057143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDU1JzI4LjYiTiA3M8KwNDUnMzEuOSJF!5e1!3m2!1sen!2sin!4v1738927638256!5m2!1sen!2sin",
       address:
         "Sr.No. 31,, Panchgani - Mahabaleshwar Rd, Bhose, Maharashtra 412805",
     },
