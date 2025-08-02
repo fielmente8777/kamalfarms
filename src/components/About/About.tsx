@@ -11,7 +11,7 @@ const About = () => {
         <div className="lg:col-span-3 w-full relative aspect-[4/2.5]">
           <Image
             src={
-              "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/home/asset+7.webp"
+              "/Kamal_Photos_for_Web_Hall_Mood.jpg"
             }
             alt="About - A Riverside Abode amidst Nature"
             className="h-full object-cover"

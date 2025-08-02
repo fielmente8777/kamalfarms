@@ -2,8 +2,8 @@ export const sustainabilityPageData = {
   bannerData: {
     title: "Introduction",
     images: [
-      "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/sustainability/image-1.webp",
-      "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/sustainability/image-2.webp",
+      "/im1.webp",
+      "/im2.webp",
     ],
     desc: [
       "Over the past few years, we've realised that the lesser we interfere with nature, the more it flourishes. Ever since, our core value has been to promote ecological balance and conserve biodiversity. This ensured that we have a thriving farm with healthy produce.",
@@ -18,7 +18,7 @@ export const sustainabilityPageData = {
         "Today we've been able to produce fruits and vegetables that are not only grown organically but nurtured through and through. We take pride in serving a fresh plate of guilt free food that will completely nourish you.",
       ],
       image:
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/sustainability/image-3.webp",
+        "/im3.webp",
       btnName: {
         href: "/contact-us",
         label: "Know More",
@@ -31,7 +31,7 @@ export const sustainabilityPageData = {
         "We adopted the Miyawaki method of afforestation to ensure ecological balance. For a balanced ecological system a lot of insects and birds that are often shunned away, play an essential role. Their presence is a bio indicator that the farm is thriving and could serve as a home to all the birds and insects. At Kamal Farms, we welcome every little help from worms and insects because we consider them our friends.",
       ],
       image:
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/sustainability/image-4.webp",
+        "/im3.webp",
       btnName: {
         href: "/contact-us",
         label: "Know More",
@@ -47,8 +47,8 @@ export const eventsAndMorePageData = {
   bannerData: {
     title: "Introduction",
     images: [
-      "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/events/img-1.webp",
-      "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/events/img-2.webp",
+      "/im7.webp",
+      "/im6.webp",
     ],
     desc: [
       "A good event venue makes all the difference. If you’re looking for a perfect destination for an intimate wedding, the picturesque backdrop of Pej river and the panoramic view of hills would capture the most memorable picture of your wedding day for you and your family.",
@@ -63,7 +63,7 @@ export const eventsAndMorePageData = {
         "The villa and cottage can accommodate upto 50 guests and lawns spanning over 10,000 sq.ft. can host up to another 150 day guests. Have a memorable wedding filled with love and laughter at Kamal Farms.",
       ],
       image:
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/events/img-3.webp",
+        "/im7.webp",
       btnName: {
         href: "/contact-us",
         label: "Contact Us",
@@ -76,7 +76,7 @@ export const eventsAndMorePageData = {
         "Imagine conducting an office conference underneath trees, a hackathon by a river, or a team bonding session amidst hills. Kamal Farms is an ideal venue to blow off steam with your crew and colleagues for an office outing.",
       ],
       image:
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/events/img-4.webp",
+        "/im27.webp",
       btnName: {
         href: "/contact-us",
         label: "Know More",
@@ -89,7 +89,7 @@ export const eventsAndMorePageData = {
         "The farms are absolutely charming for nature specific workshops such as Butterfly gardening, the art of bonsai, beekeeping, permaculture design, plant craft- horticulture techniques, pottery, yoga, meditation, soul healing and much more.",
       ],
       image:
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/events/img-5.webp",
+        "/im28.webp",
       btnName: {
         href: "/contact-us",
         label: "Contact Us",
@@ -120,7 +120,7 @@ export const aboutUsPageData = {
         "It is surrounded by meadows, trees, rivers, mountains, caves, and temples. The Ulhas Valley, Kondana Caves, Kothali Gadh, Pali Bhutivali Dam are places worth a short trek. It is a perfect location for Kamal farms to host visitors with absolute care so you can return home refreshed and recharged in the lap of nature.",
       ],
       image:
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/about_us/img-3.webp",
+        "/im21.webp",
       btnName: {
         href: "/contact-us",
         label: "Book Your Stay in Karjat",
@@ -132,7 +132,7 @@ export const aboutUsPageData = {
         "Panchgani is a hill station southeast of Mumbai in India’s Maharashtra state. It’s known for the Table Land, a huge volcanic plateau. Lookouts like Sydney Point and Parsi Point offer views of Dhom Dam lake and Kamalgad Fort, used as a prison by the British in the early 19th century. To the southeast, the Rajpuri Caves are surrounded by sacred ponds and contain a temple dedicated to the Hindu god Lord Kartikeya.",
       ],
       image:
-        "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/about_us/img-4.webp",
+        "/im24.webp",
       btnName: {
         href: "/contact-us",
         label: "Book Your Stay in Panchgani",
@@ -142,11 +142,11 @@ export const aboutUsPageData = {
   experience: {
     title: "Experience / Activities",
     arrImages: [
-      "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/sustainability/image-2.webp",
-      "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/about_us/img-5.webp",
-      "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/about_us/img-6.webp",
-      "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/4.5-bedroom-villa/image+7.webp",
-      "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/about_us/img-7.webp",
+      "/im33.webp",
+      "/im32.webp",
+      "/im25.webp",
+      "/im7.webp",
+      "/327417.png",
     ],
     list: [
       "<b>Farm Tour:</b> The Farm is blessed with organic produce. We take pleasure in indulging you into the journey we share with the farm and indigenous forest and sharing knowledge about traditional methods of farming.",
@@ -161,43 +161,43 @@ export const aboutUsPageData = {
     description: `If you are one of those travellers who love sightseeing, Karjat has a variety of places that can satisfy the tourist in you. From waterfalls, rivers, lakes, mountains, caves, forts to film studios and amusement parks, Karjat offers it all.`,
     images: [
       {
-        src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/about_us/img-8.webp",
+        src: "/im31.webp",
         title: "Kothaligadh",
         description:
           "Approximately 14 kms away from Kamal Farms, Kothaligadh, is a majestic fort with a panoramic view of the Ulhas valley.",
       },
       {
-        src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/about_us/img-9.webp",
+        src: "/im19.webp",
         title: "Garbett Plateau",
         description:
           "Green from top to bottom during the rainy season, Garbett plateau is 2000 ft above sea level. The view from the top is breathtaking.",
       },
       {
-        src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/about_us/img-10.webp",
+        src: "/im22.webp",
         title: "Bhivpuri Waterfalls",
         description:
           "During the rainy season, rappelling at Bhivpuri is ideal for trekkers. The waterfall is beautiful and definitely worth a short trek.",
       },
       {
-        src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/about_us/img-11.webp",
+        src: "/im23.webp",
         title: "Kondana Caves",
         description:
           "Deep-rooted with ancient history, Kondana caves used to serve as a home for Buddhist monks. The architecture of these caves is worth a trek.",
       },
       {
-        src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/about_us/img-12.webp",
+        src: "/im26.webp",
         title: "ND Studios",
         description:
           "The Nitin Desai Film Studio, offers tours and activities on the sets of Oscar winning film Slumdog Millionaire, Jodhaa Akbar and much more.",
       },
       {
-        src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/about_us/img-13.webp",
+        src: "/im35.png",
         title: "Adlabs Imagica",
         description:
           "25 Kms away from Karjat, A fun day at Adlabs imagica is exhilarating. This famous amusement park offers arenas and rides for people of all ages.",
       },
       {
-        src: "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/about_us/img-14.webp",
+        src: "/im5.webp",
         title: "Matheran",
         description:
           "21 Kms away from Karjat, Matheran is a comforting hill station ideal for family holidays. The hill station has various points, perfect for adventurers.",

@@ -3,8 +3,8 @@
 export const contactBannerData = {
   data: {
     images: [
-      "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverview-nest/image1.webp",
-      "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/3-bedroom-riverview-nest/image+2.webp",
+      "/im34.png",
+      "/im20.webp",
     ],
     title: "Contact Details",
     desc: [
