@@ -276,7 +276,7 @@ export const SlugData: slugDataProps[] = [
       title: "Experience / Activities",
       arrImages: [
         "/3-bedroom-riverside-cottage/Kamal Photos for Web_Room 1-09.jpg",
-        "/3-bedroom-riverside-cottage/asset+5.webp",
+        "/3-bedroom-riverside-cottage/exp.jpg",
         "/3-bedroom-riverside-cottage/Kamal Photos for Web_Hall Mood.jpg",
         "/3-bedroom-riverside-cottage/Kamal Photos for Web_Room 3-08.jpg",
         "/3-bedroom-riverside-cottage/_DSC6562.jpg",

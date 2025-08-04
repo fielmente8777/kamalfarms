@@ -104,8 +104,8 @@ export const aboutUsPageData = {
   bannerData: {
     title: "Introduction",
     images: [
-      "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/about_us/img-1.webp",
-      "https://eazotel-client-images.s3.ap-south-1.amazonaws.com/kamal+Farms/about_us/img-2.webp",
+      "/aboutbnr1.png",
+      "/aboutbnr2.png",
     ],
     desc: [
       "Kamal Farms is blessed with beauty and charm for a wholesome stay. Filled with warmth and comfort in every nook and corner, it is built for those who want to fill themselves up with joy and laughter. It is a perfect destination to let go and allow nature to unravel its magic for a calming experience.",
